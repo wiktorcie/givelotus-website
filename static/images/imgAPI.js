@@ -41,6 +41,11 @@ const imgAPI = {
   lotus: [
     '/images/lotus/lotus-flower.svg',
     '/images/appreciate.png',
+    '/images/logo.png',
+    '/images/lotus/Lotus_C_Icon_white_back.png',
+    '/images/lotus/Lotus_C_Secondary_Stacked.png',
+    '/images/lotus/Lotus_C_Primary_Stacked.png',
+    '/images/lotus/Lotus_C_Icon.png',
   ],
   projects: [
     '/images/stampchat.png',

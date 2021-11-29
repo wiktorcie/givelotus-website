@@ -7,7 +7,7 @@ if (typeof Storage !== 'undefined') { // eslint-disable-line
 
 /** !IMPORTANT
 ** If you change the palette bellow,
-** don't forget to update /lotus-theme/components/Testimonials/Testimonials.vue on const palette as well.
+** don't forget to update /saas-theme/components/Testimonials/Testimonials.vue on const palette as well.
 ** Make sure the const palette has same value as this const palette bellow
 **/
 

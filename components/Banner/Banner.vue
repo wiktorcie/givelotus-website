@@ -65,7 +65,7 @@
           </div>
         </div>
         <div class="illustration">
-          <img :src="imgAPI.lotus[0]" alt="illustration" />
+          <img :src="imgAPI.lotus[5]" alt="illustration" style="border-radius: 50%"/>
         </div>
       </div>
     </v-container>

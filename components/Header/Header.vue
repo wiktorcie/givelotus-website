@@ -41,6 +41,7 @@
                 :to="link.lotus.home"
               >
                 <img
+                  style="border-radius: 50%"
                   :src="logo"
                   alt="logo"
                 >
@@ -54,6 +55,7 @@
                   class="anchor-link scrollactive-item"
                 >
                   <img
+                    style="border-radius: 50%"
                     :src="logo"
                     alt="logo"
                   >
@@ -139,6 +141,7 @@
 
 <script>
 import logo from '~/static/images/logo.png'
+import Lotus_C_Icon from '~/static/images/lotus/Lotus_C_Icon.png'
 import link from '~/static/text/link'
 import brand from '~/static/text/brand'
 import Hidden from '../Hidden'
@@ -171,7 +174,7 @@ export default {
   },
   data() {
     return {
-      logo: logo,
+      logo: Lotus_C_Icon,
       link: link,
       loaded: false,
       brand: brand,

@@ -6,9 +6,9 @@
         <section id="home">
           <banner />
         </section>
-        <!-- <section>
+        <section>
           <company-logo />
-        </section> -->
+        </section>
         <section :class="!isMobile && 'space-top-short'">
           <counter />
         </section>
@@ -34,9 +34,9 @@
       <hidden point="mdDown">
         <page-nav />
       </hidden>
-      <hidden point="mdDown">
+      <!-- <hidden point="mdDown">
         <notification />
-      </hidden>
+      </hidden> -->
     </div>
   </div>
 </template>
