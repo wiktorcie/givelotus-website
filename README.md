@@ -53,3 +53,7 @@ then
 ```
 yarn start
 ```
+
+Credits:
+
+built with impressive awrora-starter https://github.com/ilhammeidi/awrora-starter
