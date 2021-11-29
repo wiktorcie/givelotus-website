@@ -128,17 +128,23 @@
               </v-btn>
             </hidden> -->
             <hidden v-if="!invert" point="xsDown">
-              <v-btn icon class="social-btn">
+              <v-btn icon class="social-btn"
+                href="https://twitter.com/givelotus"
+                target="_blank"
+              >
                 <i class="ion-social-twitter" />
               </v-btn>
-              <v-btn icon class="social-btn">
-                <i class="ion-social-facebook" />
+              <v-btn icon class="social-btn"
+                href="https://www.reddit.com/r/lotusproject/"
+                target="_blank"
+              >
+                <i class="ion-social-reddit" />
               </v-btn>
-              <v-btn icon class="social-btn">
-                <i class="ion-social-instagram" />
-              </v-btn>
-              <v-btn icon class="social-btn">
-                <i class="ion-social-linkedin" />
+              <v-btn icon class="social-btn"
+                href="https://github.com/LogosFoundation"
+                target="_blank"
+              >
+                <i class="ion-social-github" />
               </v-btn>
             </hidden>
             <setting-menu :invert="invert" />
