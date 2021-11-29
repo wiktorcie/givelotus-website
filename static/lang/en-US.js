@@ -61,6 +61,7 @@ export default () => {
         "header_pricing": "pricing and plan",
         "header_faq": "faq",
         "header_contact": "contact",
+        "header_block_explorer": "Block explorer",
         "banner_title": "",
         "banner_titlestrong": "The token of appreciation",
         "banner_subtitle": "Lotus is a priceless digital token of appreciation that you can always keep at hand.",

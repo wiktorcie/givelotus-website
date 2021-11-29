@@ -90,6 +90,18 @@
                     {{ $t('lotusLanding.header_'+item.name) }}
                   </v-btn>
                 </li>
+
+                <li>
+                  <v-btn
+                    href="https://explorer.givelotus.org/"
+                    target="_blank"
+                    text
+                  >
+                    {{ $t('lotusLanding.header_block_explorer') }}
+                  </v-btn>
+                </li>
+
+
                 <li>
                   <v-btn
                     :href="link.lotus.contact"
@@ -98,6 +110,8 @@
                     {{ $t('lotusLanding.header_contact') }}
                   </v-btn>
                 </li>
+
+
               </scrollactive>
             </div>
           </nav>

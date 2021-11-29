@@ -21,6 +21,20 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
+        <v-list-item
+          href="https://explorer.givelotus.org/"
+          target="_blank"
+          :style="{ animationDuration: navMenu.length * 0.15 + 's' }"
+          link
+        >
+          <v-list-item-content>
+            <v-list-item-title class="menu-list">
+              {{ $t('lotusLanding.header_block_explorer') }}
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
         <v-list-item
           :href="link.lotus.contact"
           :style="{ animationDuration: navMenu.length * 0.15 + 's' }"
@@ -32,6 +46,7 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+
         <!-- <v-divider class="divider-sidebar" /> -->
         <!-- <v-list-item
           v-for="item in ['login', 'register']"
