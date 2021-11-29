@@ -111,6 +111,20 @@
                 {{ $t('lotusLanding.header_register') }}
               </v-btn>
             </hidden> -->
+            <hidden v-if="!invert" point="xsDown">
+              <v-btn icon class="social-btn">
+                <i class="ion-social-twitter" />
+              </v-btn>
+              <v-btn icon class="social-btn">
+                <i class="ion-social-facebook" />
+              </v-btn>
+              <v-btn icon class="social-btn">
+                <i class="ion-social-instagram" />
+              </v-btn>
+              <v-btn icon class="social-btn">
+                <i class="ion-social-linkedin" />
+              </v-btn>
+            </hidden>
             <setting-menu :invert="invert" />
           </nav>
         </div>
