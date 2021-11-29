@@ -101,17 +101,6 @@
                   </v-btn>
                 </li>
 
-
-                <li>
-                  <v-btn
-                    :href="link.lotus.contact"
-                    text
-                  >
-                    {{ $t('lotusLanding.header_contact') }}
-                  </v-btn>
-                </li>
-
-
               </scrollactive>
             </div>
           </nav>
@@ -145,6 +134,12 @@
                 target="_blank"
               >
                 <i class="ion-social-github" />
+              </v-btn>
+              <v-btn icon class="social-btn"
+                href="https://t.me/givelotus"
+                target="_blank"
+              >
+                <i class="ion-paper-airplane" />
               </v-btn>
             </hidden>
             <setting-menu :invert="invert" />

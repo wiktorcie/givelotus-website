@@ -35,18 +35,6 @@
           </v-list-item-content>
         </v-list-item>
 
-        <v-list-item
-          :href="link.lotus.contact"
-          :style="{ animationDuration: navMenu.length * 0.15 + 's' }"
-          link
-        >
-          <v-list-item-content>
-            <v-list-item-title class="menu-list">
-              {{ $t('lotusLanding.header_contact') }}
-            </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-
         <!-- <v-divider class="divider-sidebar" /> -->
         <!-- <v-list-item
           v-for="item in ['login', 'register']"
