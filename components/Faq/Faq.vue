@@ -64,7 +64,7 @@ const faqData = [
   {
     q: 'How do I start mining?',
     a:
-      'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor.'
+      'You will need to run Lotus Node with ... ... ... .'
   },
   {
     q: 'How do I get hold of Lotus?',
@@ -74,7 +74,7 @@ const faqData = [
   {
     q: 'What are available wallets?',
     a:
-      'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. '
+      'Cashew mobile wallet [link]. Lotus Node [link] '
   },
   {
     q: 'How can I contribute to the project?',

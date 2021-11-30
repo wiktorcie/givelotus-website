@@ -121,25 +121,34 @@
                 href="https://twitter.com/givelotus"
                 target="_blank"
               >
-                <i class="ion-social-twitter" />
+                <v-icon>
+                  mdi-twitter
+               </v-icon>
               </v-btn>
+
               <v-btn icon class="social-btn"
                 href="https://www.reddit.com/r/lotusproject/"
                 target="_blank"
               >
-                <i class="ion-social-reddit" />
+               <v-icon>
+                  mdi-reddit
+               </v-icon>
               </v-btn>
               <v-btn icon class="social-btn"
                 href="https://github.com/LogosFoundation"
                 target="_blank"
               >
-                <i class="ion-social-github" />
+               <v-icon>
+                  mdi-github
+               </v-icon>
               </v-btn>
               <v-btn icon class="social-btn"
                 href="https://t.me/givelotus"
                 target="_blank"
               >
-                <i class="ion-paper-airplane" />
+               <v-icon>
+                  telegram
+               </v-icon>
               </v-btn>
             </hidden>
             <setting-menu :invert="invert" />
