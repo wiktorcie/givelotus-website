@@ -4,6 +4,28 @@
 
       <div class="carousel-handle">
         <div v-if="loaded" class="carousel-wrap">
+
+          <nav class="">
+            <v-btn
+              fab
+              small
+              aria-label="next"
+              class="margin"
+              @click="prev()"
+            >
+              <v-icon>mdi-arrow-left</v-icon>
+            </v-btn>
+            <v-btn
+              fab
+              small
+              aria-label="prev"
+              class="margin"
+              @click="next()"
+            >
+              <v-icon>mdi-arrow-right</v-icon>
+            </v-btn>
+          </nav>
+
           <slick
             ref="slick"
             :options="slickOptions"
@@ -13,6 +35,7 @@
                 <div />
               </div>
             </div>
+
             <div
               v-for="(item, index) in projectsList"
               :key="index"
@@ -25,17 +48,15 @@
                 :url="item.url"
                 :button="$t('lotusLanding.services_button')"
               />
+
             </div>
-            <div class="item">
-              <div class="carousel-prop">
-                <div />
-              </div>
-            </div>
+
           </slick>
+
         </div>
       </div>
-
-      <!-- <div class="floating-title">
+<!--
+      <div class="floating-title">
         <v-container class="fixed-width">
           <div class="title">
             <title-icon
@@ -67,6 +88,8 @@
           </div>
         </v-container>
       </div> -->
+
+
   </v-container>
   </div>
 </template>
@@ -91,13 +114,12 @@ export default {
       loaded: false,
       slickOptions: {
         dots: false,
-        infinite: false,
+        infinite: true,
         centerMode: false,
         speed: 350,
         slidesToShow: 4,
         autoplay: true,
         autoplaySpeed: 2000,
-        arrows: false,
         slidesToScroll: 1,
         variableWidth: true,
         responsive: [
