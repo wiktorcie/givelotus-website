@@ -43,14 +43,15 @@ const imgAPI = {
     '/images/appreciate.png',
     '/images/logo.png',
     '/images/lotus/Lotus_C_Icon_white_back.png',
-    '/images/lotus/Lotus_C_Secondary_Stacked.png',
+    '/images/lotus/Lotus_C_Secondary_Stacked.jpg',
     '/images/lotus/Lotus_C_Primary_Stacked.png',
     '/images/lotus/Lotus_C_Icon.png',
   ],
   projects: [
     '/images/stampchat.png',
     '/images/becash.png',
-    '/images/bitcoinabclogo.png'
+    '/images/bitcoinabclogo.png',
+    '/images/logos.png',
   ]
 }
 

@@ -6,26 +6,24 @@
         <section id="home">
           <banner />
         </section>
-        <section>
-          <company-logo />
-        </section>
         <section :class="!isMobile && 'space-top-short'">
           <counter />
         </section>
-        <section id="feature" :class="isMobile ? 'space-top-short' : 'space-top'">
+
+        <!-- <section id="feature" :class="isMobile ? 'space-top-short' : 'space-top'">
           <feature />
         </section>
-        <section id="projects" :class="isMobile ? 'space-top-short' : 'space-top'">
-          <projects />
+         -->
+
+        <section id="projects2" :class="isMobile ? 'space-top-short' : 'space-top'">
+          <Projects2 />
         </section>
+        <br>
         <section id="testimonials" class="space-bottom-testi">
           <testimonials />
         </section>
         <section id="faq" class="space-top-short">
           <faq />
-        </section>
-        <section class="space-top-short space-bottom-short">
-          <news-event />
         </section>
       </div>
       <section id="footer">
@@ -101,22 +99,23 @@ import Feature from '~/components/Feature'
 import Projects from '~/components/Projects'
 import Testimonials from '~/components/Testimonials'
 import Faq from '~/components/Faq'
-import NewsEvent from '~/components/NewsEvent'
 import FooterWithDeco from '~/components/Footer/FooterWithDeco'
 import Notification from '~/components/Notification'
+import Projects2 from '~/components/Projects2'
+
 import brand from '~/static/text/brand'
 
 export default {
   components: {
     'main-header': Header,
     Banner,
+    Projects2,
     CompanyLogo,
     Counter,
     Feature,
     Projects,
     Testimonials,
     Faq,
-    NewsEvent,
     FooterWithDeco,
     PageNav,
     Hidden,

@@ -94,6 +94,8 @@ export default () => {
         "stampchat_desc": " StampChat is a decentralized end-to-end encrypted messenger which uses the Lotus token to ensure all messages you receive are valuable. This allows spam to be filtered on the platform without centralized moderators. The communication is decentralized, secure, and uncensorable. ",
         "becash_desc": " Be.cash collaborates with the Logos Foundation to assist in developing the lotus blockchain software, as well as developing Point of Sale systems and mobile payment methods for areas without the necessary infrastructure for traditional payment methods. ",
         "bitcoin_abc_desc": " Bitcoin ABC develops highly scalable open-source software for mining and transferring cryptotokens. Although Bitcoin ABC does not charge for its work, Lotus uses this software as a basis for the network and deems it appropriate to reciprocate to these developers. ",
+        "services_title": "Projects enabled by Lotus:",
+        "services_button": "Explore project",
       }
     })
   })
