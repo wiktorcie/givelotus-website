@@ -1,71 +1,73 @@
 <template>
   <div class="root">
-    <div class="carousel-handle">
-      <div v-if="loaded" class="carousel-wrap">
-        <slick
-          ref="slick"
-          :options="slickOptions"
-        >
-          <div class="item">
-            <div class="carousel-prop">
-              <div />
-            </div>
-          </div>
-          <div
-            v-for="(item, index) in projectsList"
-            :key="index"
-            class="item"
+    <v-container class="fixed-width">
+
+      <div class="carousel-handle">
+        <div v-if="loaded" class="carousel-wrap">
+          <slick
+            ref="slick"
+            :options="slickOptions"
           >
-            <card
-              :title="item.title"
-              :desc="item.desc"
-              :img="item.img"
-              :url="item.url"
-              :button="$t('lotusLanding.services_button')"
-            />
-          </div>
-          <div class="item">
-            <div class="carousel-prop">
-              <div />
+            <div class="item">
+              <div class="carousel-prop">
+                <div />
+              </div>
             </div>
-          </div>
-        </slick>
-      </div>
-    </div>
-
-    <!-- <div class="floating-title">
-      <v-container class="fixed-width">
-        <div class="title">
-          <title-icon
-            :text="$t('lotusLanding.services_title')"
-            icon=""
-            extended
-          />
-          <nav class="arrow">
-            <v-btn
-              fab
-              small
-              aria-label="next"
-              class="margin"
-              @click="next()"
+            <div
+              v-for="(item, index) in projectsList"
+              :key="index"
+              class="item"
             >
-              <v-icon>mdi-arrow-left</v-icon>
-            </v-btn>
-            <v-btn
-              fab
-              small
-              aria-label="prev"
-              class="margin"
-              @click="prev()"
-            >
-              <v-icon>mdi-arrow-right</v-icon>
-            </v-btn>
-          </nav>
-
+              <card
+                :title="item.title"
+                :desc="item.desc"
+                :img="item.img"
+                :url="item.url"
+                :button="$t('lotusLanding.services_button')"
+              />
+            </div>
+            <div class="item">
+              <div class="carousel-prop">
+                <div />
+              </div>
+            </div>
+          </slick>
         </div>
-      </v-container>
-    </div> -->
+      </div>
 
+      <!-- <div class="floating-title">
+        <v-container class="fixed-width">
+          <div class="title">
+            <title-icon
+              :text="$t('lotusLanding.services_title')"
+              icon=""
+              extended
+            />
+            <nav class="arrow">
+              <v-btn
+                fab
+                small
+                aria-label="next"
+                class="margin"
+                @click="next()"
+              >
+                <v-icon>mdi-arrow-left</v-icon>
+              </v-btn>
+              <v-btn
+                fab
+                small
+                aria-label="prev"
+                class="margin"
+                @click="prev()"
+              >
+                <v-icon>mdi-arrow-right</v-icon>
+              </v-btn>
+            </nav>
+
+          </div>
+        </v-container>
+      </div> -->
+  </v-container>
   </div>
 </template>
 
@@ -89,7 +91,8 @@ export default {
       loaded: false,
       slickOptions: {
         dots: false,
-        infinite: true,
+        infinite: false,
+        centerMode: false,
         speed: 350,
         slidesToShow: 4,
         autoplay: true,
