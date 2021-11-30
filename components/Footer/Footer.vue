@@ -12,9 +12,9 @@
               :src="logo"
               alt="logo"
             >
-            <h6 class="title">
+            <!-- <h6 class="title">
               {{ brand.lotus.projectName }}
-            </h6>
+            </h6> -->
           </div>
           <p class="body-2 text-center" v-if="isDesktop">
             &copy;&nbsp;

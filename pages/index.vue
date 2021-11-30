@@ -100,7 +100,6 @@ import Counter from '~/components/Counter'
 import Feature from '~/components/Feature'
 import Projects from '~/components/Projects'
 import Testimonials from '~/components/Testimonials'
-import PricingPlan from '~/components/PricingPlan'
 import Faq from '~/components/Faq'
 import NewsEvent from '~/components/NewsEvent'
 import FooterWithDeco from '~/components/Footer/FooterWithDeco'
@@ -116,7 +115,6 @@ export default {
     Feature,
     Projects,
     Testimonials,
-    PricingPlan,
     Faq,
     NewsEvent,
     FooterWithDeco,
