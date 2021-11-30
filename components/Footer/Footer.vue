@@ -85,33 +85,38 @@
           class="pa-4"
         >
           <div class="socmed">
-            <v-btn
-              text
-              icon
-              class="button"
+            <v-btn icon class="social-btn"
+              href="https://twitter.com/givelotus"
+              target="_blank"
             >
-              <span class="ion-social-facebook icon" />
+              <v-icon large>
+                mdi-twitter
+              </v-icon>
             </v-btn>
-            <v-btn
-              text
-              icon
-              class="button"
+
+            <v-btn icon class="social-btn"
+              href="https://www.reddit.com/r/lotusproject/"
+              target="_blank"
             >
-              <span class="ion-social-twitter icon" />
+              <v-icon large>
+                mdi-reddit
+              </v-icon>
             </v-btn>
-            <v-btn
-              text
-              icon
-              class="button"
+            <v-btn icon class="social-btn"
+              href="https://github.com/LogosFoundation"
+              target="_blank"
             >
-              <span class="ion-social-instagram icon" />
+              <v-icon large>
+                mdi-github
+              </v-icon>
             </v-btn>
-            <v-btn
-              text
-              icon
-              class="button"
+            <v-btn icon class="social-btn"
+              href="https://t.me/givelotus"
+              target="_blank"
             >
-              <span class="ion-social-linkedin icon" />
+              <v-icon large>
+                telegram
+              </v-icon>
             </v-btn>
           </div>
           <v-select
