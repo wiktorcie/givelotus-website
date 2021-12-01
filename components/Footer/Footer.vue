@@ -89,7 +89,7 @@
               href="https://twitter.com/givelotus"
               target="_blank"
             >
-              <v-icon large>
+              <v-icon large color="white">
                 mdi-twitter
               </v-icon>
             </v-btn>
@@ -98,7 +98,7 @@
               href="https://www.reddit.com/r/lotusproject/"
               target="_blank"
             >
-              <v-icon large>
+              <v-icon large color="white">
                 mdi-reddit
               </v-icon>
             </v-btn>
@@ -106,7 +106,7 @@
               href="https://github.com/LogosFoundation"
               target="_blank"
             >
-              <v-icon large>
+              <v-icon large color="white">
                 mdi-github
               </v-icon>
             </v-btn>
@@ -114,7 +114,7 @@
               href="https://t.me/givelotus"
               target="_blank"
             >
-              <v-icon large>
+              <v-icon large color="white">
                 telegram
               </v-icon>
             </v-btn>
