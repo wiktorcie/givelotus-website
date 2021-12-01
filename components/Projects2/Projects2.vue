@@ -1,6 +1,12 @@
 <template>
   <div class="root">
     <v-container class="fixed-width">
+      <div class="text-center text-bold">
+         New Lotus are issued through rewards that are split between miners and projects which benefit the public good as a show of appreciation.
+      </div>
+      <div class="text-center text-bold">
+          Whenever you use Lotus to appreciate your friends, you know that you're also supporting these great projects.
+      </div>
       <!--
       <nav class="">
         <v-btn

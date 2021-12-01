@@ -7,7 +7,7 @@ const brand = {
     logoText: 'Lotus',
     projectName: 'GiveLotus.org',
     url: 'givelotus.org',
-    img: '/static/images/logo.png',
+    img: '/images/logo.png',
     notifMsg:
       'Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula.'
   }
