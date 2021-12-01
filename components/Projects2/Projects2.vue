@@ -85,7 +85,7 @@ export default {
         variableWidth: true,
         infinite: true,
 
-        centerMode: true,
+        centerMode: false,
 
         speed: 500,
         slidesToShow: 4,
@@ -198,9 +198,9 @@ export default {
     this.loaded = true
     setTimeout(() => {
       if (window.innerWidth > 1200 && !this.$vuetify.rtl) {
-        this.$refs.slick.goTo(2)
+        this.$refs.slick.goTo(3)
       }
-    }, 100)
+    }, 10)
   },
   methods: {
     next: function() {
