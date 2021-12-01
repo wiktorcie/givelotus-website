@@ -12,7 +12,7 @@ const brand = {
 
     // not sure that's the right way to do it, but the method
     // above doesn't work.
-    img: 'https://givelotus.netlify.app/images/lotus/Lotus_C_Secondary_Stacked.jpg',
+    img: 'https://givelotus.netlify.app/images/lotus/og_lotus_img.png',
     notifMsg:
       'Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula.'
   }
