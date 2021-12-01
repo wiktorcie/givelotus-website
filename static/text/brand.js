@@ -7,7 +7,7 @@ const brand = {
     logoText: 'Lotus',
     projectName: 'Lotus',
     url: 'givelotus.org',
-    img: 'https://givelotus.netlify.app/images/lotus/Lotus_C_Primary_Stacked.png',
+    img: '/images/lotus/Lotus_C_Secondary_Stacked.jpg',
     notifMsg:
       'Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula.'
   }

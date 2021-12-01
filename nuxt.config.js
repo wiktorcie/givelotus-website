@@ -23,16 +23,16 @@ module.exports = {
       // PWA primary color
       { name: 'theme-color', content: theme.primary},
       // Facebook
-      { property: 'author', content: 'lotus' },
-      { property: 'og:site_name', content: 'givelotus.org' },
+      { property: 'author', content: 'Lotus - The Token of Appreciation' },
+      { property: 'og:site_name', content: 'givelotus.org  - TEST og:site_name' },
       { property: 'og:locale', content: 'en_US' },
       { property: 'og:type', content: 'website' },
       // Twitter
-      { property: 'twitter:site', content: 'givelotus.org' },
-      { property: 'twitter:domain', content: 'givelotus.org' },
+      { property: 'twitter:site', content: 'givelotus.org - TEST twitter:site' },
+      { property: 'twitter:domain', content: 'givelotus.org - TEST twitter:domain' },
       { property: 'twitter:creator', content: 'lotus' },
       { property: 'twitter:card', content: 'summary' },
-      { property: 'twitter:image:src', content: '/images/logo.png' },
+      { property: 'twitter:image:src', content: brand.lotus.img },
       { property: 'og:url', content: brand.lotus.url },
       { property: 'og:title', content: brand.lotus.projectName },
       { property: 'og:description', content: brand.lotus.desc },
@@ -40,8 +40,8 @@ module.exports = {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:image', content: brand.lotus.img },
       { property: 'og:image', content: brand.lotus.img },
-      { property: 'og:image:width', content: '1200' },
-      { property: 'og:image:height', content: '630' }
+      { property: 'og:image:width', content: '900' },
+      { property: 'og:image:height', content: '900' }
     ],
     link: [
       // Favicon
