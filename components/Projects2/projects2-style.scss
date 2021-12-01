@@ -94,3 +94,16 @@
     margin-top: 560px
   }
 }
+
+.carousel-arrow-right {
+  position: absolute;
+  right: 0.1em;
+  top: 20em;
+  z-index: 20; /* overlap arrow controls to allow clicks */
+}
+.carousel-arrow-left {
+  position: absolute;
+  left: 0.1em;
+  top: 20em;
+  z-index: 20; /* overlap arrow controls to allow clicks */
+}
