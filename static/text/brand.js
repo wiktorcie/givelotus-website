@@ -5,9 +5,9 @@ const brand = {
     prefix: 'Lotus - The Token of Appreciation',
     footerText: 'GiveLotus.org',
     logoText: 'Lotus',
-    projectName: 'GiveLotus.org',
+    projectName: 'Lotus',
     url: 'givelotus.org',
-    img: '/images/logo.png',
+    img: 'https://givelotus.netlify.app/images/lotus/Lotus_C_Primary_Stacked.png',
     notifMsg:
       'Donec sit amet nulla sed arcu pulvinar ultricies commodo id ligula.'
   }
