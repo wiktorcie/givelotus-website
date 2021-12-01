@@ -24,12 +24,12 @@ module.exports = {
       { name: 'theme-color', content: theme.primary},
       // Facebook
       { property: 'author', content: 'Lotus - The Token of Appreciation' },
-      { property: 'og:site_name', content: 'givelotus.org  - TEST og:site_name' },
+      { property: 'og:site_name', content: 'GiveLotus' },
       { property: 'og:locale', content: 'en_US' },
       { property: 'og:type', content: 'website' },
       // Twitter
-      { property: 'twitter:site', content: 'givelotus.org - TEST twitter:site' },
-      { property: 'twitter:domain', content: 'givelotus.org - TEST twitter:domain' },
+      { property: 'twitter:site', content: 'givelotus.org' },
+      { property: 'twitter:domain', content: 'givelotus.org' },
       { property: 'twitter:creator', content: 'lotus' },
       { property: 'twitter:card', content: 'summary' },
       { property: 'twitter:image:src', content: brand.lotus.img },
