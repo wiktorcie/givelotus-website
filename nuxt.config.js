@@ -40,8 +40,8 @@ module.exports = {
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:image', content: brand.lotus.img },
       { property: 'og:image', content: brand.lotus.img },
-      { property: 'og:image:width', content: '900' },
-      { property: 'og:image:height', content: '900' }
+      { property: 'og:image:width', content: '1200' },
+      { property: 'og:image:height', content: '630' }
     ],
     link: [
       // Favicon
