@@ -1,8 +1,8 @@
 const brand = {
   lotus: {
-    name: 'GiveLotus.org',
-    desc: 'Home of lotus token.',
-    prefix: 'lotus',
+    name: 'Lotus',
+    desc: 'Lotus is a priceless digital token of appreciation that you can always keep at hand.',
+    prefix: 'Lotus- The Token of Appreciation',
     footerText: 'GiveLotus.org',
     logoText: 'Lotus',
     projectName: 'GiveLotus.org',
