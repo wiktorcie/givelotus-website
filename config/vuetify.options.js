@@ -14,7 +14,7 @@ if (typeof Storage !== 'undefined') { // eslint-disable-line
 const palette = {
   violeta: {
     primary: "#A7008F", // colors.purple.base, // primary main
-    primarylight: "#7200D3", // colors.purple.lighten4, // primary light
+    primarylight: "#ad4dff", // colors.purple.lighten4, // primary light
     primarydark: "#6B0080", // colors.purple.darken3, // primary dark
     secondary: colors.lightGreen.base, // secondary main
     secondarylight: colors.lightGreen.lighten4, // secondary light
