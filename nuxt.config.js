@@ -104,6 +104,7 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
     ['@nuxtjs/html-minifier', { log: 'once', logHtml: true }],
     [
       'nuxt-mq',
