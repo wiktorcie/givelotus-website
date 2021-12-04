@@ -223,6 +223,9 @@ export default {
   data() {
     return {
       items: [
+        { name: 'Nvidia GeFore RTX3090', hashrate: 900, watt_consumption: 290},
+        { name: 'Radeon Pro W5500', hashrate: 615, watt_consumption: 120},
+        { name: 'Radeon RX 570 ', hashrate: 330, watt_consumption: 110},
         { name: 'AMD 6900 XT', hashrate: 2200, watt_consumption: 250},
         { name: 'AMD 6800 XT', hashrate: 2100, watt_consumption: 250},
         { name: 'AMD 6600 XT', hashrate: 1100, watt_consumption: 175},
