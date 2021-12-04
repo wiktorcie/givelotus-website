@@ -37,6 +37,7 @@ export default {
     return {
       title: brand.lotus.name + ' - Calculator',
       meta: [
+        { property: 'author', content: 'Lotus - Rewards Calculator' },
         { name: 'description', content: "Calculate rewards and electricity costs for mining Lotus with your GPU." },
         { property: 'og:description', content: "Calculate rewards and electricity costs for mining Lotus with your GPU." },
       ],
