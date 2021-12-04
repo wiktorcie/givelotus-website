@@ -366,7 +366,8 @@ export default {
     dailyRewards() {
       // I have no idea how this works.
       let network_hashrate_gh = this.total_network_hash_rate / 1000000000
-      let daily_xpi = (Math.log(this.current_difficulty/16,2)+1)*260/2*this.user_hashrate/1000/network_hashrate_gh*720
+
+      let daily_xpi = ((Math.log(this.current_difficulty/16,2))/ Math.LN2 + 1)*260/2*this.user_hashrate/1000/network_hashrate_gh*720
       let daily_usd = daily_xpi * this.avg_price
 
       //hourly
