@@ -64,7 +64,7 @@ const faqData = [
   {
     q: 'How do I start mining?',
     a:
-      'You will need to run Lotus Node with ... ... ... .'
+      'You will need to run Lotus Node with ... ... ... . you can check your expectd hashing and rewards using our calculator -> calc_link'
   },
   {
     q: 'How do I get hold of Lotus?',

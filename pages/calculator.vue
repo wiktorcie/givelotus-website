@@ -1,11 +1,14 @@
 <template>
   <div>
-    <Calculator
-      :avg_price="avg_price"
-      :current_difficulty="current_difficulty"
-      :total_network_hash_rate="total_network_hash_rate"
-     />
+    <div>
+      <Calculator
+        :avg_price="avg_price"
+        :current_difficulty="current_difficulty"
+        :total_network_hash_rate="total_network_hash_rate"
+      />
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -14,8 +17,8 @@ import brand from '~/static/text/brand'
 
 export default {
   components: {
-    Calculator
-  },
+    Calculator,
+},
 
   async asyncData({ params, $axios }) {
     // We can use async/await ES6 feature
@@ -38,8 +41,8 @@ export default {
       title: brand.lotus.name + ' - Calculator',
       meta: [
         { property: 'author', content: 'Lotus - Rewards Calculator' },
-        { name: 'description', content: "Calculate rewards and electricity costs for mining Lotus with your GPU." },
-        { property: 'og:description', content: "Calculate rewards and electricity costs for mining Lotus with your GPU." },
+        { name: 'description', content: "Calculate rewards and electricity costs for mining Lotus with your GPU card." },
+        { property: 'og:description', content: "Calculate rewards and electricity costs for mining Lotus with your GPU card." },
       ],
     }
   }

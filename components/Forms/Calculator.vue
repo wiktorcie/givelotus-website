@@ -28,6 +28,7 @@
         </nuxt-link>
       </div>
     </hidden>
+
     <v-container class="inner-wrap max-md">
       <v-btn
         :href="routeLink.lotus.home"
@@ -132,7 +133,7 @@
 
               <div class="flex pb-3">
                 <h3 class="pb-3">
-                  Rewards:
+                  Rewards
                 </h3>
                 <v-data-table
                   :headers="headers_profitability"
@@ -147,7 +148,7 @@
 
               <div class="flex pb-3">
                 <h3 class="pb-3">
-                  Electricity costs:
+                  Electricity costs
                 </h3>
                 <v-data-table
                   :headers="headers_electricity"
@@ -207,7 +208,7 @@ import Hidden from '../Hidden'
 
 export default {
   components: {
-    Hidden
+    Hidden,
   },
   props: {
     avg_price: {
@@ -245,7 +246,7 @@ export default {
       routeLink: link,
       headers_profitability: [
         {
-          text: 'timeframe',
+          text: 'period',
           align: 'start',
           sortable: false,
           value: 'name',
@@ -255,7 +256,7 @@ export default {
       ],
       headers_electricity: [
         {
-          text: 'timeframe',
+          text: 'period',
           align: 'start',
           sortable: false,
           value: 'name',
@@ -309,7 +310,7 @@ export default {
       ],
       headers_other: [
         {
-          text: 'timeframe',
+          text: 'period',
           align: 'start',
           sortable: false,
           value: 'name',
