@@ -225,7 +225,7 @@ export default {
       items: [
         { name: 'AMD 6900 XT', hashrate: 2200, watt_consumption: 250},
         { name: 'AMD 6800 XT', hashrate: 2100, watt_consumption: 250},
-        { name: 'AMD 6600 XT', hashrate: 2200, watt_consumption: 350},
+        { name: 'AMD 6600 XT', hashrate: 1100, watt_consumption: 175},
         { name: 'Mac Mini M1', hashrate: 80, watt_consumption: 20},
         { name: 'other', hashrate: 0, watt_consumption: 0},
       ],
