@@ -8,12 +8,12 @@
       class="notification"
     >
       <div class="action">
-        Message Sent
+        Message sent
       </div>
       <v-btn
         text
         icon
-        @click="snackbar = false"
+        @click=""
       >
         <v-icon>mdi-close</v-icon>
       </v-btn>
@@ -57,9 +57,9 @@
           <h3 class="pb-3 text-center">
               Your daily lotus rewards: {{dailyRewards.toFixed(2)}} XPI
           </h3>
-
-
-
+          <h3 class="pb-3 text-center">
+              Daily electricity cost: {{electricityCosts.toFixed(2)}} usd
+          </h3>
 
           <div class="form">
             <v-form
@@ -67,7 +67,21 @@
               v-model="valid"
             >
               <v-row class="spacing6">
+                <v-col cols="12" sm="16" class="px-9">
+                  <v-select
+                    return-object
+                    ref='gpuSelect'
+                    v-model="gpuSelected"
+                    :items="items"
+                    :item-text="'name'"
+                    attach
+                    class="input light"
+                    label="GPU"
+                    @change='updateHashrate'
+                  ></v-select>
+                </v-col>
                 <v-col cols="12" sm="12" class="px-6">
+
                   <v-text-field
                     v-model="user_hashrate"
                     :label="$t('common.user_hashrate')"
@@ -88,7 +102,6 @@
                     color="white"
                     suffix="watt"
                     filled
-                    disabled
                   />
                 </v-col>
                 <v-col cols="12" sm="12" class="px-6">
@@ -100,9 +113,9 @@
                     suffix="USD"
                     class="input light"
                     filled
-                    disabled
                   />
                 </v-col>
+
 <!--
                 <v-col cols="12" class="px-6">
                   <v-textarea
@@ -115,6 +128,8 @@
                   />
                 </v-col> -->
               </v-row>
+
+
               <div class="flex pb-3">
                 <h3 class="pb-3">
                   Rewards:
@@ -124,24 +139,24 @@
                   :hide-default-footer="true"
                   :items="dataItems"
                   :items-per-page="5"
-                  class="elevation-1 primary"
+                  class="elevation-1 rewards_table"
                 ></v-data-table>
 
               </div>
 
-              <!-- <div class="flex">
+              <div class="flex pb-3">
                 <h3 class="pb-3">
-                  Rewards (after electricity cost):
+                  Electricity costs:
                 </h3>
                 <v-data-table
-                  :headers="headers_other"
+                  :headers="headers_electricity"
                   :hide-default-footer="true"
-                  :items="dataOther"
+                  :items="dataElectricity"
                   :items-per-page="5"
-                  class="elevation-1 primary"
+                  class="elevation-1 rewards_table"
                 ></v-data-table>
 
-              </div> -->
+              </div>
 
               <div class="info_calculator">
                 <p class="desc use-text-subtitle2 text-center">
@@ -155,6 +170,21 @@
                 <br>
                 ** values from exbitron and givelotus explorer apis.
               </div>
+              <!-- <div class="btn-area flex">
+                <div class="form-control-label">
+                  <span>
+                    <a href="#" class="link">
+                    </a>
+                  </span>
+                </div>
+                <v-btn
+                  :block="isMobile"
+                  color="secondary"
+                  large
+                >
+                  {{ $t('common.update_data') }}
+                </v-btn>
+              </div> -->
             </v-form>
           </div>
         </div>
@@ -173,7 +203,6 @@ import logo from '~/static/images/logo.png'
 import brand from '~/static/text/brand'
 import link from '~/static/text/link'
 import Hidden from '../Hidden'
-//const axios = require("axios");
 
 export default {
   components: {
@@ -192,6 +221,14 @@ export default {
   },
   data() {
     return {
+      items: [
+        { name: 'AMD 6900 XT', hashrate: 2200, watt_consumption: 250},
+        { name: 'AMD 6800 XT', hashrate: 2100, watt_consumption: 250},
+        { name: 'AMD 6600 XT', hashrate: 2200, watt_consumption: 350},
+        { name: 'Mac Mini M1', hashrate: 80, watt_consumption: 20},
+        { name: 'other', hashrate: 0, watt_consumption: 0},
+      ],
+      gpuSelected: [],
       user_hashrate: 3800,
       user_watt: 700,
       user_watt_cost: 0.1,
@@ -211,6 +248,38 @@ export default {
         },
         { text: 'Lotus', value: 'xpi' },
         { text: 'USDT', value: 'usdt' },
+      ],
+      headers_electricity: [
+        {
+          text: 'timeframe',
+          align: 'start',
+          sortable: false,
+          value: 'name',
+        },
+        { text: 'kwh', value: 'kwh' },
+        { text: 'USD', value: 'usd' },
+      ],
+      dataElectricity: [
+        {
+          name: 'Hourly',
+          kwh: 150,
+          usd: 6.0,
+        },
+        {
+          name: 'Daily',
+          kwh: 237,
+          usd: 9.0,
+        },
+        {
+          name: 'Weekly',
+          kwh: 262,
+          usd: 16.0,
+        },
+        {
+          name: 'Monthly',
+          kwh: 305,
+          usd: 3.7,
+        },
       ],
       dataItems: [
         {
@@ -279,6 +348,10 @@ export default {
       val = val.toFixed(number_of_decimals)
 
       return val
+    },
+    updateHashrate() {
+      this.user_hashrate = this.gpuSelected.hashrate
+      this.user_watt = this.gpuSelected.watt_consumption
     }
   },
   computed: {
@@ -310,10 +383,34 @@ export default {
 
       return daily_xpi
     },
-    electricityConsumption() {
-      let daily_electricity_consumption = power_consumption_watt
-      let weekly_electricity_consumption = power_consumption_watt * 7
-      let monthly_electricity_consumption = power_consumption_watt * 30
+    electricityCosts() {
+      let daily_electricity_consumption = this.user_watt * 24 / 1000
+      let hourly_electricity_consumption = daily_electricity_consumption / 24
+      let weekly_electricity_consumption = daily_electricity_consumption * 7
+      let monthly_electricity_consumption = daily_electricity_consumption * 30
+
+      let daily_electricity_cost = daily_electricity_consumption * this.user_watt_cost
+      let hourly_electricity_cost = hourly_electricity_consumption * this.user_watt_cost
+      let weekly_electricity_cost = weekly_electricity_consumption * this.user_watt_cost
+      let monthly_electricity_cost = monthly_electricity_consumption * this.user_watt_cost
+
+      //hourly
+      this.dataElectricity[0].kwh = hourly_electricity_consumption.toFixed(2)
+      this.dataElectricity[0].usd = hourly_electricity_cost.toFixed(2)
+
+      //daily
+      this.dataElectricity[1].kwh = daily_electricity_consumption.toFixed(2)
+      this.dataElectricity[1].usd = daily_electricity_cost.toFixed(2)
+
+      //weekly
+      this.dataElectricity[2].kwh = weekly_electricity_consumption.toFixed(2)
+      this.dataElectricity[2].usd = weekly_electricity_cost.toFixed(2)
+
+      //monthly
+      this.dataElectricity[3].kwh = monthly_electricity_consumption.toFixed(2)
+      this.dataElectricity[3].usd = monthly_electricity_cost.toFixed(2)
+
+      return daily_electricity_cost
     }
   }
 }
