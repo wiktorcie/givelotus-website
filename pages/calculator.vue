@@ -16,6 +16,7 @@ export default {
   components: {
     Calculator
   },
+
   async asyncData({ params, $axios }) {
     // We can use async/await ES6 feature
     const res1 = await $axios.get(
@@ -34,7 +35,14 @@ export default {
   },
   head() {
     return {
-      title: brand.lotus.name + ' - Calculator'
+      title: brand.lotus.name + ' - Calculator',
+      meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Calculate rewards and electricity costs for mining Lotus with your GPU.'
+      }
+    ],
     }
   }
 }
