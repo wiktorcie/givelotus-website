@@ -12,7 +12,7 @@ export default () => {
         "contact_title": "Free Project Quote",
         "contact_title2": "Lotus Mining Calculator",
         "contact_subtitle": "Calculating using:",
-        "update_data": "Update data",
+        "update_data": "Fetch new data",
         "form_name": "What is your hashrate? *",
         "user_hashrate": "What is your hashrate? *",
         "form_email": "What is your power consumption? *",

@@ -18,9 +18,6 @@ export default {
 },
 
   async asyncData({ store }) {
-    // await store.dispatch('calculator/fetchPrice')
-    // await store.dispatch('calculator/fetchDifficulty')
-    // await store.dispatch('calculator/fetchNetworkHashrate')
 
     try {
       await store.dispatch('calculator/fetchPrice')

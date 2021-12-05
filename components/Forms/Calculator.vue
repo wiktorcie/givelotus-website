@@ -121,6 +121,91 @@
                   />
                 </v-col>
 
+              <div class="btn-area flex">
+                <div class="form-control-label">
+                </div>
+                <v-switch
+                  v-model="showAdvanced"
+                  label="Show advanced"
+                >
+                  {{ $t('common.show_advanced') }}
+                </v-switch>
+              </div>
+
+              <v-container v-if='showAdvanced'>
+                <v-row
+                  justify="space-between"
+                >
+                  <v-col
+                    cols="12"
+                    md="12"
+                  >
+                    <v-form ref="form">
+                      <v-text-field
+                        v-model="avg_price"
+                        filled
+                        type='number'
+                        step='0.0001'
+                        class="input light"
+                        label="Average Price [USDT]"
+                      ></v-text-field>
+                    </v-form>
+                  </v-col>
+                </v-row>
+
+                <v-row
+                  justify="space-between"
+                >
+                  <v-col
+                    cols="12"
+                    md="12"
+                  >
+                    <v-form ref="form">
+                      <v-text-field
+                        v-model="current_difficulty"
+                        filled
+                        type='number'
+                        class="input light"
+                        @input="value => $store.commit('calculator/UPDATE_DIFFICULTY', value)"
+                        label="Current difficulty"
+                      ></v-text-field>
+                    </v-form>
+                  </v-col>
+                </v-row>
+
+                <v-row
+                  justify="space-between"
+                >
+                  <v-col
+                    cols="12"
+                    md="12"
+                  >
+                    <v-form ref="form">
+                      <v-text-field
+                        v-model="total_network_hash_rate"
+                        filled
+                        type='number'
+                        class="input light"
+                        @input="value => $store.commit('calculator/UPDATE_NETWORK_HASHRATE', value)"
+                        label="Total network hashrate"
+                      ></v-text-field>
+                    </v-form>
+                  </v-col>
+                </v-row>
+
+                <div class="btn-area flex">
+                  <div class="form-control-label">
+                  </div>
+                  <v-btn
+                    :block="isMobile"
+                    color="secondary"
+                    @click='fetchNewData'
+                    large
+                  >
+                    {{ $t('common.update_data') }}
+                  </v-btn>
+                </div>
+              </v-container>
 <!--
                 <v-col cols="12" class="px-6">
                   <v-textarea
@@ -164,35 +249,12 @@
 
               </div>
 
-              <div class="info_calculator">
-                <p class="desc use-text-subtitle2 text-center">
-                  {{ $t('common.contact_subtitle') }}
-                </p>
 
-                <p>Average Price: {{ format_to_X_decimals(avg_price, 5) }} USDT</p>
-                <p>Current difficulty: {{ format_to_X_decimals(current_difficulty, 2) }}</p>
-                <p>Total network hashrate: {{ format_to_X_decimals(total_network_hash_rate / 1000000000, 2)  }} GHs</p>
 
-                ** decimal places rounded for readability, algo uses full values
-                <br>
-                ** values from exbitron and givelotus explorer apis.
-              </div>
-              <!-- <div class="btn-area flex">
-                <div class="form-control-label">
-                  <span>
-                    <a href="#" class="link">
-                    </a>
-                  </span>
-                </div>
-                <v-btn
-                  :block="isMobile"
-                  color="secondary"
-                  large
-                >
-                  {{ $t('common.update_data') }}
-                </v-btn>
-              </div> -->
+
             </v-form>
+
+
           </div>
         </div>
       </v-card>
@@ -210,7 +272,6 @@ import logo from '~/static/images/logo.png'
 import brand from '~/static/text/brand'
 import link from '~/static/text/link'
 import Hidden from '../Hidden'
-import { mapState } from 'vuex'
 
 export default {
   components: {
@@ -228,6 +289,7 @@ export default {
         { name: 'Mac Mini M1', hashrate: 80, watt_consumption: 20},
       ],
       gpuSelected: [],
+      showAdvanced: false,
       user_hashrate: 2200,
       user_watt: 250,
       user_watt_cost: 0.1,
@@ -351,14 +413,41 @@ export default {
     updateHashrate() {
       this.user_hashrate = this.gpuSelected.hashrate
       this.user_watt = this.gpuSelected.watt_consumption
+    },
+    fetchNewData() {
+      console.log('fetching new data')
+      this.$store.dispatch('calculator/fetchPrice')
+      this.$store.dispatch('calculator/fetchDifficulty')
+      this.$store.dispatch('calculator/fetchNetworkHashrate')
+      console.log('fetch done, values updated')
     }
   },
   computed: {
-    ...mapState({
-      avg_price: state => state.calculator.avg_price,
-      current_difficulty: state => state.calculator.current_difficulty,
-      total_network_hash_rate: state => state.calculator.total_network_hash_rate,
-    }),
+    avg_price: {
+      get () {
+        return this.$store.state.calculator.avg_price
+      },
+      set (value) {
+        this.$store.commit('calculator/UPDATE_PRICE', value)
+      }
+    },
+    current_difficulty: {
+      get () {
+        return this.$store.state.calculator.current_difficulty
+      },
+      set (value) {
+        this.$store.commit('calculator/UPDATE_DIFFICULTY', value)
+      }
+    },
+    total_network_hash_rate: {
+      get () {
+        return this.$store.state.calculator.total_network_hash_rate
+      },
+      set (value) {
+        this.$store.commit('calculator/UPDATE_NETWORK_HASHRATE', value)
+      }
+    },
+
     isMobile() {
       const smDown = this.$store.state.breakpoints.smDown
       return smDown.indexOf(this.$mq) > -1
