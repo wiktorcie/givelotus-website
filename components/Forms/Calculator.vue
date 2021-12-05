@@ -8,7 +8,7 @@
       class="notification"
     >
       <div class="action">
-        Message sent
+        Test message/notification
       </div>
       <v-btn
         text
@@ -53,17 +53,17 @@
       <v-card class="form-box fragment-fadeUp">
         <div class="full-form-wrap">
           <h3 class="use-text-title title-contact pb-3 text-center">
-            {{ $t('common.contact_title2') }}
+            {{ $t('calculator.title') }}
           </h3>
           <h4 class="pb-3 text-center">
-            [experimental]
+            {{ $t('calculator.subtitle') }}
           </h4>
 
           <h3 class="pb-3 text-center">
-              Your daily lotus rewards: {{dailyRewards.toFixed(2)}} XPI
+              {{ $t('calculator.user_rewards_xpi') }}{{dailyRewards.toFixed(2)}} XPI
           </h3>
           <h3 class="pb-3 text-center">
-              Daily electricity cost: {{electricityCosts.toFixed(2)}} usd
+              {{ $t('calculator.user_electricity_costs') }}{{electricityCosts.toFixed(2)}} usd
           </h3>
 
           <div class="form">
@@ -82,14 +82,14 @@
                     attach
                     filled
                     class="input light"
-                    label="What is your GPU card?"
+                    :label="$t('calculator.gpu_question')"
                     @change='updateHashrate'
                   ></v-select>
                 </v-col>
                 <v-col cols="12" sm="12" class="px-6">
                   <v-text-field
                     v-model="user_hashrate"
-                    :label="$t('common.user_hashrate')"
+                    :label="$t('calculator.user_hashrate')"
                     color="white"
                     type="number"
                     suffix="mh/s"
@@ -102,7 +102,7 @@
                   <v-text-field
                     v-model="user_watt"
                     type="number"
-                    :label="$t('common.user_power_consumption')"
+                    :label="$t('calculator.user_power_consumption')"
                     class="input light"
                     color="white"
                     suffix="watt"
@@ -113,7 +113,7 @@
                   <v-text-field
                     v-model="user_watt_cost"
                     type="number"
-                    :label="$t('common.watt_cost')"
+                    :label="$t('calculator.watt_cost')"
                     color="white"
                     suffix="USD"
                     class="input light"
@@ -126,9 +126,8 @@
                 </div>
                 <v-switch
                   v-model="showAdvanced"
-                  label="Show advanced"
+                  :label="$t('calculator.advanced')"
                 >
-                  {{ $t('common.show_advanced') }}
                 </v-switch>
               </div>
 
@@ -147,7 +146,7 @@
                         type='number'
                         step='0.0001'
                         class="input light"
-                        label="Average Price [USDT]"
+                        :label="$t('calculator.avg_price')"
                       ></v-text-field>
                     </v-form>
                   </v-col>
@@ -167,7 +166,7 @@
                         type='number'
                         class="input light"
                         @input="value => $store.commit('calculator/UPDATE_DIFFICULTY', value)"
-                        label="Current difficulty"
+                        :label="$t('calculator.current_difficulty')"
                       ></v-text-field>
                     </v-form>
                   </v-col>
@@ -187,7 +186,7 @@
                         type='number'
                         class="input light"
                         @input="value => $store.commit('calculator/UPDATE_NETWORK_HASHRATE', value)"
-                        label="Total network hashrate"
+                        :label="$t('calculator.total_network_hashrate')"
                       ></v-text-field>
                     </v-form>
                   </v-col>
@@ -202,7 +201,7 @@
                     @click='fetchNewData'
                     large
                   >
-                    {{ $t('common.update_data') }}
+                    {{ $t('calculator.update_data') }}
                   </v-btn>
                 </div>
               </v-container>
@@ -222,7 +221,7 @@
 
               <div class="flex pb-3">
                 <h3 class="pb-3">
-                  Rewards
+                  {{ $t('calculator.rewards') }}
                 </h3>
                 <v-data-table
                   :headers="headers_profitability"
@@ -237,7 +236,7 @@
 
               <div class="flex pb-3">
                 <h3 class="pb-3">
-                  Electricity costs
+                  {{ $t('calculator.electricity_costs') }}
                 </h3>
                 <v-data-table
                   :headers="headers_electricity"
@@ -246,15 +245,8 @@
                   :items-per-page="5"
                   class="elevation-1 rewards_table"
                 ></v-data-table>
-
               </div>
-
-
-
-
             </v-form>
-
-
           </div>
         </div>
       </v-card>
@@ -323,79 +315,57 @@ export default {
       ],
       dataElectricity: [
         {
-          name: 'Hourly',
+          name: this.$t('calculator.hourly'),
           kwh: 150,
           usd: 6.0,
         },
         {
-          name: 'Daily',
+          name: this.$t('calculator.daily'),
           kwh: 237,
           usd: 9.0,
         },
         {
-          name: 'Weekly',
+          name: this.$t('calculator.weekly'),
           kwh: 262,
           usd: 16.0,
         },
         {
-          name: 'Monthly',
+          name: this.$t('calculator.monthly'),
           kwh: 305,
           usd: 3.7,
         },
       ],
       dataItems: [
         {
-          name: 'Hourly',
+          name: this.$t('calculator.hourly'),
           xpi: 150,
           usdt: 6.0,
         },
         {
-          name: 'Daily',
+          name: this.$t('calculator.daily'),
           xpi: 237,
           usdt: 9.0,
         },
         {
-          name: 'Weekly',
+          name: this.$t('calculator.weekly'),
           xpi: 262,
           usdt: 16.0,
         },
         {
-          name: 'Monthly',
+          name: this.$t('calculator.monthly'),
           xpi: 305,
           usdt: 3.7,
         },
       ],
       headers_other: [
         {
-          text: 'period',
+          text: this.$t('calculator.period'),
           align: 'start',
           sortable: false,
           value: 'name',
         },
         { text: 'Lotus', value: 'xpi' },
         { text: 'USDT', value: 'usdt' },
-      ],
-      dataOther: [
-        {
-          name: 'Hourly',
-          xpi: 150,
-          usdt: 6.0,
-        },
-        {
-          name: 'Daily',
-          xpi: 237,
-          usdt: 9.0,
-        },
-        {
-          name: 'Weekly',
-          xpi: 262,
-          usdt: 16.0,
-        },
-        {
-          name: 'Monthly',
-          xpi: 305,
-          usdt: 3.7,
-        },
       ],
     }
   },
