@@ -295,7 +295,7 @@ export default {
       routeLink: link,
       headers_profitability: [
         {
-          text: 'period',
+          text: this.$t('calculator.period'),
           align: 'start',
           sortable: false,
           value: 'name',
@@ -305,7 +305,7 @@ export default {
       ],
       headers_electricity: [
         {
-          text: 'period',
+          text: this.$t('calculator.period'),
           align: 'start',
           sortable: false,
           value: 'name',
