@@ -1,37 +1,45 @@
 <template>
-  <div>
-      <Calculator
-        :avg_price="avg_price"
-        :current_difficulty="current_difficulty"
-        :total_network_hash_rate="total_network_hash_rate"
-      />
+  <div class="main-wrap">
+    <main-header />
+    <Calculator
+    />
   </div>
 </template>
 
 <script>
 import Calculator from '~/components/Forms/Calculator'
 import brand from '~/static/text/brand'
+import Header from '~/components/Header'
 
 export default {
   components: {
-    Calculator
+    Calculator,
+    'main-header': Header,
 },
 
-  async asyncData({ params, $axios }) {
-    // We can use async/await ES6 feature
-    const res1 = await $axios.get(
-      "https://www.exbitron.com/api/v2/peatio/public/markets/xpiusdt/tickers"
-    );
-    const res2 = await $axios.get(
-      "https://explorer.givelotus.org/api/getdifficulty"
-    );
-    const res3 = await $axios.get(
-      "https://explorer.givelotus.org/api/getnetworkhashps"
-    );
-    return {
-          avg_price: res1.data.ticker.avg_price,
-          current_difficulty: res2.data,
-          total_network_hash_rate: res3.data };
+  async asyncData({ store }) {
+    // await store.dispatch('calculator/fetchPrice')
+    // await store.dispatch('calculator/fetchDifficulty')
+    // await store.dispatch('calculator/fetchNetworkHashrate')
+
+    try {
+      await store.dispatch('calculator/fetchPrice')
+    } catch (e) {
+      console.log('couldnt fetch price')
+    }
+
+    try {
+      await store.dispatch('calculator/fetchDifficulty')
+    } catch (e) {
+      console.log('couldnt fetch difficulty')
+    }
+
+    try {
+      await store.dispatch('calculator/fetchNetworkHashrate')
+    } catch (e) {
+      console.log('couldnt fetch network hashrate')
+    }
+
   },
   head() {
     return {

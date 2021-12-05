@@ -18,7 +18,8 @@
         <v-icon>mdi-close</v-icon>
       </v-btn>
     </v-snackbar>
-    <hidden point="mdUp">
+
+    <!-- <hidden point="mdUp">
       <div class="logo logo-header">
         <nuxt-link :to="routeLink.lotus.home">
           <img :src="logo" alt="logo">
@@ -27,17 +28,18 @@
           </span>
         </nuxt-link>
       </div>
-    </hidden>
+    </hidden> -->
 
     <v-container class="inner-wrap max-md">
-      <v-btn
+
+      <!-- <v-btn
         :href="routeLink.lotus.home"
         icon
         class="backtohome"
       >
         <i class="ion-ios-home-outline" />
         <i class="ion-ios-arrow-thin-left" />
-      </v-btn>
+      </v-btn> -->
 
 
       <div class="decoration">
@@ -170,6 +172,7 @@
                 <p>Average Price: {{ format_to_X_decimals(avg_price, 5) }} USDT</p>
                 <p>Current difficulty: {{ format_to_X_decimals(current_difficulty, 2) }}</p>
                 <p>Total network hashrate: {{ format_to_X_decimals(total_network_hash_rate / 1000000000, 2)  }} GHs</p>
+
                 ** decimal places rounded for readability, algo uses full values
                 <br>
                 ** values from exbitron and givelotus explorer apis.
@@ -207,21 +210,11 @@ import logo from '~/static/images/logo.png'
 import brand from '~/static/text/brand'
 import link from '~/static/text/link'
 import Hidden from '../Hidden'
+import { mapState } from 'vuex'
 
 export default {
   components: {
     Hidden,
-  },
-  props: {
-    avg_price: {
-      type: String,
-    },
-    current_difficulty: {
-      type: String,
-    },
-    total_network_hash_rate: {
-      type: String,
-    }
   },
   data() {
     return {
@@ -361,6 +354,11 @@ export default {
     }
   },
   computed: {
+    ...mapState({
+      avg_price: state => state.calculator.avg_price,
+      current_difficulty: state => state.calculator.current_difficulty,
+      total_network_hash_rate: state => state.calculator.total_network_hash_rate,
+    }),
     isMobile() {
       const smDown = this.$store.state.breakpoints.smDown
       return smDown.indexOf(this.$mq) > -1
