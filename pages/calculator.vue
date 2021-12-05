@@ -1,14 +1,11 @@
 <template>
   <div>
-    <div>
       <Calculator
         :avg_price="avg_price"
         :current_difficulty="current_difficulty"
         :total_network_hash_rate="total_network_hash_rate"
       />
-    </div>
   </div>
-
 </template>
 
 <script>
@@ -17,7 +14,7 @@ import brand from '~/static/text/brand'
 
 export default {
   components: {
-    Calculator,
+    Calculator
 },
 
   async asyncData({ params, $axios }) {

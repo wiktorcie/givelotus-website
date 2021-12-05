@@ -38,6 +38,8 @@
         <i class="ion-ios-home-outline" />
         <i class="ion-ios-arrow-thin-left" />
       </v-btn>
+
+
       <div class="decoration">
         <svg class="left-deco">
           <use xlink:href="/images/lotus/deco-bg-left.svg#main" />
@@ -68,7 +70,7 @@
               v-model="valid"
             >
               <v-row class="spacing6">
-                <v-col cols="12" sm="16" class="px-9">
+                <v-col cols="12" sm="12" class="px-6">
                   <v-select
                     return-object
                     ref='gpuSelect'
@@ -76,13 +78,13 @@
                     :items="items"
                     :item-text="'name'"
                     attach
+                    filled
                     class="input light"
-                    label="GPU"
+                    label="What is your GPU card?"
                     @change='updateHashrate'
                   ></v-select>
                 </v-col>
                 <v-col cols="12" sm="12" class="px-6">
-
                   <v-text-field
                     v-model="user_hashrate"
                     :label="$t('common.user_hashrate')"
@@ -224,18 +226,17 @@ export default {
   data() {
     return {
       items: [
-        { name: 'Nvidia GeFore RTX3090', hashrate: 900, watt_consumption: 290},
+        { name: 'other', hashrate: 0, watt_consumption: 0},
         { name: 'Radeon Pro W5500', hashrate: 615, watt_consumption: 120},
         { name: 'Radeon RX 570 ', hashrate: 330, watt_consumption: 110},
         { name: 'AMD 6900 XT', hashrate: 2200, watt_consumption: 250},
         { name: 'AMD 6800 XT', hashrate: 2100, watt_consumption: 250},
         { name: 'AMD 6600 XT', hashrate: 1100, watt_consumption: 175},
         { name: 'Mac Mini M1', hashrate: 80, watt_consumption: 20},
-        { name: 'other', hashrate: 0, watt_consumption: 0},
       ],
       gpuSelected: [],
-      user_hashrate: 3800,
-      user_watt: 700,
+      user_hashrate: 2200,
+      user_watt: 250,
       user_watt_cost: 0.1,
       valid: true,
       snackbar: false,
