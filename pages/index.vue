@@ -19,9 +19,11 @@
           <Projects2 />
         </section>
         <br>
+
         <section id="testimonials" class="space-bottom-testi">
           <testimonials />
         </section>
+
         <section id="faq" class="space-top-short">
           <faq />
         </section>

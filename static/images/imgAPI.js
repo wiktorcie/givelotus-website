@@ -28,16 +28,16 @@ const imgAPI = {
     'https://via.placeholder.com/1280x851/c4ffd7/757575',
     'https://via.placeholder.com/640x425/c4cdff/757575'
   ],
-  lotus: [
-    'https://via.placeholder.com/1000x625/f2c9ff/757575',
-    'https://via.placeholder.com/1472x637/5abce4/FFFFFF',
-    'https://via.placeholder.com/1000x625/e6f8ff/757575',
-    '/images/lotus/app-counter.png',
-    'https://via.placeholder.com/1000x680/b44fd4/FFFFFF',
-    'https://via.placeholder.com/1000x680/00a7e8/FFFFFF',
-    'https://via.placeholder.com/1000x680/e91e63/FFFFFF',
-    '/images/lotus/desktop_illustration.png'
-  ],
+  // lotus: [
+  //   'https://via.placeholder.com/1000x625/f2c9ff/757575',
+  //   'https://via.placeholder.com/1472x637/5abce4/FFFFFF',
+  //   'https://via.placeholder.com/1000x625/e6f8ff/757575',
+  //   '/images/lotus/app-counter.png',
+  //   'https://via.placeholder.com/1000x680/b44fd4/FFFFFF',
+  //   'https://via.placeholder.com/1000x680/00a7e8/FFFFFF',
+  //   'https://via.placeholder.com/1000x680/e91e63/FFFFFF',
+  //   '/images/lotus/desktop_illustration.png'
+  // ],
   lotus: [
     '/images/lotus/lotus-flower.svg',
     '/images/appreciate.png',
@@ -51,7 +51,7 @@ const imgAPI = {
     '/images/stampchat.jpg',
     '/images/becash.jpg',
     '/images/bitcoinabclogo.png',
-    '/images/logos.png',
+    '/images/logos.jpg',
   ]
 }
 

@@ -7,60 +7,21 @@
       <div class="text-center text-bold">
           Whenever you use Lotus to appreciate your friends, you know that you're also supporting these great projects.
       </div>
-      <!--
-      <nav class="">
-        <v-btn
-          small
-          tile
-          aria-label="next"
-          class="margin carousel-arrow-left"
-          @click="prev()"
-        >
-          <v-icon>mdi-arrow-left</v-icon>
-        </v-btn>
-        <v-btn
-          small
-          tile
-          aria-label="prev"
-          class="margin carousel-arrow-right"
-          @click="next()"
-        >
-          <v-icon>mdi-arrow-right</v-icon>
-        </v-btn>
-      </nav>
-       -->
 
-      <div class="carousel-handle">
-        <div v-if="loaded" class="carousel-wrap">
-
-          <slick
-            ref="slick"
-            :options="slickOptions"
-          >
-            <div class="item">
-              <div class="carousel-prop">
-                <div />
+      <div v-if="loaded" >
+        <vue-horizontal-list :items="items" :options="options">
+          <template v-slot:default="{ item }">
+            <div>
+              <div class="image-container">
+                <img :src="item.image" />
               </div>
+
+              <h3>{{ item.title }}</h3>
+              <p>{{ item.content }}</p>
             </div>
+          </template>
+        </vue-horizontal-list>
 
-            <div
-              v-for="(item, index) in projectsList"
-              :key="index"
-              class="item"
-            >
-              <card
-                :title="item.title"
-                :desc="item.desc"
-                :img="item.img"
-                :url="item.url"
-                :button="$t('lotusLanding.services_button')"
-              />
-
-            </div>
-
-          </slick>
-
-        </div>
       </div>
   </v-container>
   </div>
@@ -74,139 +35,69 @@
 import imgApi from '~/static/images/imgAPI'
 import Card from '../Cards/Default'
 import TitleIcon from '../Title/WithIcon'
+import VueHorizontal from 'vue-horizontal';
+import VueHorizontalList from "vue-horizontal-list";
 
 export default {
   components: {
     Card,
+    VueHorizontalList,
+    VueHorizontal,
     TitleIcon,
-    Slick: () => import('vue-slick')
   },
   data() {
     return {
-      loaded: false,
-      slickOptions: {
-        dots: false,
-        arrows: false,
-
-        variableWidth: true,
-        infinite: true,
-
-        centerMode: false,
-
-        speed: 500,
-        slidesToShow: 4,
-        autoplay: true,
-        autoplaySpeed: 3500,
-        slidesToScroll: 1,
+      items: [
+        {
+          title: "Logos Foundation",
+          content:
+            this.$t('lotusLanding.logos_desc'),
+          url: 'https://github.com/LogosFoundation',
+          image: imgApi.projects[3],
+        },
+        {
+          title: "Stampchat",
+          content: this.$t('lotusLanding.stampchat_desc'),
+          url: 'https://stampchat.io/',
+          image: imgApi.projects[0],
+        },
+        {
+          title: "Be.cash",
+          content: this.$t('lotusLanding.becash_desc'),
+          url: 'https://be.cash/',
+          image: imgApi.projects[1],
+        },
+        {
+          title: "Bitcoin ABC",
+          content: this.$t('lotusLanding.bitcoin_abc_desc'),
+          image: imgApi.projects[2],
+        },
+      ],
+      options: {
         responsive: [
-          {
-            breakpoint: 1100,
-            settings: {
-              slidesToShow: 4
-            }
-          },
-          {
-            breakpoint: 800,
-            settings: {
-              slidesToShow: 2
-            }
-          }
-        ]
+          { end: 576, size: 1 },
+          { start: 576, end: 768, size: 2 },
+          { size: 3 },
+        ],
+        navigation: {
+          // when to show navigation
+          start: 100,
+          color: "#000",
+        },
+        autoplay: {
+          // enable/disable playing slideshow
+          play: true,
+          // the delay duration between slides in milliseconds
+          speed: 5000,
+          // if setup, the slideshow will be in the loop.
+          repeat: true,
+        },
       },
-      projectsList: [
-        {
-          title: 'Logos Foundation',
-          desc: this.$t('lotusLanding.logos_desc'),
-          url: 'https://github.com/LogosFoundation',
-          img: imgApi.projects[3]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.stampchat_desc'),
-          url: 'https://stampchat.io/',
-          img: imgApi.projects[0]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.becash_desc'),
-          url: 'https://be.cash/',
-          img: imgApi.projects[1]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.bitcoin_abc_desc'),
-          url: 'https://bitcoinabc.org/',
-          img: imgApi.projects[2]
-        },
-
-
-        // This is a terrible hack that I hate but i need to move on
-        // the problem is:
-        // There is a white space in a carousel at viewports over >1280px
-        // It doesn't happen under that.
-        // This might be a bug with slick carousel
-        // https://github.com/akiran/react-slick/issues/540
-        // I don't know how to fix it and need to move on with other.
-        // This is my attempt at hiding the white space by adding more
-        // items so user won't see the white space.
-        {
-          title: 'Logos Foundation',
-          desc: this.$t('lotusLanding.logos_desc'),
-          url: 'https://github.com/LogosFoundation',
-          img: imgApi.projects[3]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.stampchat_desc'),
-          url: 'https://stampchat.io/',
-          img: imgApi.projects[0]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.becash_desc'),
-          url: 'https://be.cash/',
-          img: imgApi.projects[1]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.bitcoin_abc_desc'),
-          url: 'https://bitcoinabc.org/',
-          img: imgApi.projects[2]
-        },
-        {
-          title: 'Logos Foundation',
-          desc: this.$t('lotusLanding.logos_desc'),
-          url: 'https://github.com/LogosFoundation',
-          img: imgApi.projects[3]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.stampchat_desc'),
-          url: 'https://stampchat.io/',
-          img: imgApi.projects[0]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.becash_desc'),
-          url: 'https://be.cash/',
-          img: imgApi.projects[1]
-        },
-        {
-          title: '',
-          desc: this.$t('lotusLanding.bitcoin_abc_desc'),
-          url: 'https://bitcoinabc.org/',
-          img: imgApi.projects[2]
-        }
-      ]
+      loaded: false,
     }
   },
   mounted() {
     this.loaded = true
-    setTimeout(() => {
-      if (window.innerWidth > 1200 && !this.$vuetify.rtl) {
-        this.$refs.slick.goTo(3)
-      }
-    }, 10)
   },
   methods: {
     next: function() {
@@ -218,3 +109,37 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+p {
+  margin-top: 4px;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+.subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+.image-container {
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+</style>

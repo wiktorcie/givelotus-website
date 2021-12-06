@@ -1,6 +1,7 @@
 <template>
 <div class="root">
   <v-container :class="{ fixed: isDesktop }">
+
     <v-row class="spacing6">
       <v-col md="7" cols="12" class="px-6">
         <div class="slider-wrap">
@@ -19,17 +20,19 @@
               </svg>
             </div>
           </hidden>
-          <h3
+          <h5
             :class="[isMobile ? 'text-center' : 'text-left']"
-            class="testi-title use-text-title2">
+            class="testi-title ">
             {{ $t('lotusLanding.testi_title') }}
             <br />
             <strong>
               {{ $t('lotusLanding.testi_titlestrong') }}
             </strong>
-          </h3>
+          </h5>
           <v-icon class="icon">mdi-format-quote-close</v-icon>
+
           <div v-if="loaded" class="carousel">
+
             <slick
               ref="slider"
               :options="slickOptions"
@@ -96,6 +99,7 @@
 <script>
 import Hidden from '../Hidden'
 import imgAPI from '~/static/images/imgAPI'
+import VueHorizontal from 'vue-horizontal';
 
 import colors from 'vuetify/lib/util/colors'
 
@@ -115,87 +119,74 @@ const theme = {
   ...palette.violeta
 }
 
+    // Open Source Software
+    // Digital Privacy
+    // Humanitarian Efforts
+    // Permaculture
+    // Renewable Power
+    // Human Rights
+
 const testiData = [
   {
     text:
-      'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam nec ex aliquet, aliquam neque non.',
-    avatar: imgAPI.avatar[10],
+      'Open Source Software',
+    avatar: imgAPI.lotus[3],
     name: 'John Doe',
     title: 'Chief Digital Officer',
-    logo: '/images/logos/agency.png'
+    logo: imgAPI.lotus[3]
   },
   {
     text:
       'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
-    avatar: imgAPI.avatar[1],
+    avatar: imgAPI.lotus[3],
     name: 'Jean Doe',
     title: 'Chief Digital Officer',
-    logo: '/images/logos/architect.png'
+    logo: imgAPI.lotus[3]
   },
   {
     text:
       'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
-    avatar: imgAPI.avatar[2],
+    avatar: imgAPI.lotus[3],
     name: 'Jena Doe',
     title: 'Graphic Designer',
-    logo: '/images/logos/cloud.png'
+    logo: imgAPI.lotus[3]
   },
   {
     text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel.',
-    avatar: imgAPI.avatar[3],
+    avatar: imgAPI.lotus[3],
     name: 'Jovelin Doe',
     title: 'Senior Graphic Designer',
-    logo: '/images/logos/starter.png'
+    logo: imgAPI.lotus[3]
   },
   {
     text:
       'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
-    avatar: imgAPI.avatar[4],
+    avatar: imgAPI.lotus[3],
     name: 'Jihan Doe',
     title: 'CEO Software House',
-    logo: '/images/logos/coin.png'
+    logo: imgAPI.lotus[3]
   },
   {
     text:
       'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
-    avatar: imgAPI.avatar[6],
+    avatar: imgAPI.lotus[3],
     name: 'Jovelin Doe',
     title: 'Senior Graphic Designer',
-    logo: '/images/logos/fashion.png'
-  },
-  {
-    text:
-      'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
-    avatar: imgAPI.avatar[7],
-    name: 'John Doe',
-    title: 'Senior Graphic Designer',
-    logo: '/images/logos/mobile.png'
-  },
-  {
-    text:
-      'Vivamus sit amet interdum elit. Proin lacinia erat ac velit tempus auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam nec ex aliquet, aliquam neque non.',
-    avatar: imgAPI.avatar[10],
-    name: 'John Doe',
-    title: 'Chief Digital Officer',
-    logo: '/images/logos/profile.png'
-  },
-  {
-    text:
-      'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
-    avatar: imgAPI.avatar[1],
-    name: 'Jean Doe',
-    title: 'Chief Digital Officer',
-    logo: '/images/logos/lotus.png'
+    logo: imgAPI.lotus[3]
   }
 ]
 
 export default {
   components: {
+    VueHorizontal,
     Hidden,
     Slick: () => import('vue-slick')
   },
   data() {
     return {
+      items: [...Array(20).keys()].map((i) => {
+        return {title: `Item ${i}`, content: `🚀 Content ${i}`};
+      }),
       loaded: false,
       currentSlide: 0,
       testiContent: testiData,
@@ -243,3 +234,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+section {
+  padding: 16px 24px;
+  background: black;
+}
+</style>
