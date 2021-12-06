@@ -60,10 +60,10 @@
           </h4>
 
           <h3 class="pb-3 text-center">
-              {{ $t('calculator.user_rewards_xpi') }}{{dailyRewards.toFixed(2)}} XPI
+              {{ $t('calculator.user_rewards_xpi') }} {{dailyRewards.toFixed(2)}} XPI
           </h3>
           <h3 class="pb-3 text-center">
-              {{ $t('calculator.user_electricity_costs') }}{{electricityCosts.toFixed(2)}} usd
+              {{ $t('calculator.user_electricity_costs') }} {{electricityCosts.toFixed(2)}} usd
           </h3>
 
           <div class="form">

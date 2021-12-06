@@ -48,8 +48,8 @@ const imgAPI = {
     '/images/lotus/Lotus_C_Icon.png',
   ],
   projects: [
-    '/images/stampchat.png',
-    '/images/becash.png',
+    '/images/stampchat.jpg',
+    '/images/becash.jpg',
     '/images/bitcoinabclogo.png',
     '/images/logos.png',
   ]
