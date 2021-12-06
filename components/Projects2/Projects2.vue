@@ -11,14 +11,15 @@
       <div v-if="loaded" >
         <vue-horizontal-list :items="items" :options="options">
           <template v-slot:default="{ item }">
-            <div>
-              <div class="image-container">
-                <img :src="item.image" />
-              </div>
+            <card
+              :img="item.image"
+              :title="item.title"
+              :desc="item.content"
+              :url="item.url"
+              :button="$t('lotusLanding.services_button')"
+            >
+            </card>
 
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.content }}</p>
-            </div>
           </template>
         </vue-horizontal-list>
 
@@ -70,6 +71,7 @@ export default {
         {
           title: "Bitcoin ABC",
           content: this.$t('lotusLanding.bitcoin_abc_desc'),
+          url: 'https://www.bitcoinabc.org/',
           image: imgApi.projects[2],
         },
       ],

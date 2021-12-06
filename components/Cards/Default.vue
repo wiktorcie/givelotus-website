@@ -1,12 +1,12 @@
 <template>
   <v-card class="default-card">
-    <figure>
+    <figure class="image-container">
       <img
         :src="img"
         alt="img"
       >
     </figure>
-    <div class="text">
+    <div class="text pt-10">
       <h6 class="title">{{ title }}</h6>
       {{ desc }}
     </div>
