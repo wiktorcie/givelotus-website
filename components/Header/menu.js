@@ -1,3 +1,3 @@
-const menu = ['feature', 'projects', 'faq']
+const menu = ['feature', 'projects2', 'faq']
 
 export default menu

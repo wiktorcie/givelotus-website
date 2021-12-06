@@ -12,8 +12,8 @@
 
         <!-- <section id="feature" :class="isMobile ? 'space-top-short' : 'space-top'">
           <feature />
-        </section>
-         -->
+        </section> -->
+
 
         <section id="projects2" :class="isMobile ? 'space-top-short' : 'space-top'">
           <Projects2 />
