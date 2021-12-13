@@ -124,7 +124,6 @@ $flag: '/images/flag-logo.png';
     }
     .social-btn {
       &::v-deep.v-btn.v-btn--icon.v-size--default {
-        @include use-theme(background, var(--v-primarylight-lighten1), rgba(134, 134, 134, 0.2));
         i {
           @include use-theme(color, $palette-primary-main, $palette-primary-light);
         }
@@ -405,7 +404,6 @@ nav.nav-menu {
 
 .social-btn {
   &::v-deep.v-btn.v-btn--icon.v-size--default {
-    background: rgba(255, 255, 255, 0.24);
     width: 35px;
     height: 35px;
     padding: 4px;
