@@ -130,6 +130,19 @@ $flag: '/images/flag-logo.png';
         }
       }
     }
+    .menu-link {
+      &::v-deep.v-btn {
+        span {
+          .theme--dark & {
+            color: white
+          }
+          .theme--light & {
+            color: black
+          }
+        }
+      }
+    }
+
     .setting {
       i {
         @include use-theme(color, $palette-primary-main, $palette-primary-light);
@@ -402,5 +415,13 @@ nav.nav-menu {
   i {
     color: $palette-common-white;
     font-size: 22px
+  }
+}
+
+.menu-link {
+  &::v-deep.v-btn {
+    span {
+      color: white;
+    }
   }
 }

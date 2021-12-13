@@ -76,11 +76,11 @@
                   <v-btn
                     v-if="!invert"
                     :href="item.url"
-                    class="anchor-link scrollactive-item"
+                    class="anchor-link menu-link scrollactive-item"
                     text
                     @click="setOffset(item.offset)"
                   >
-                    {{ $t('lotusLanding.header_'+item.name) }}
+                    {{ $t('lotusLanding.header_' + item.name) }}
                   </v-btn>
                   <v-btn
                     v-if="invert"
@@ -96,6 +96,7 @@
                     href="https://explorer.givelotus.org/"
                     target="_blank"
                     text
+                    class="menu-link"
                   >
                     {{ $t('lotusLanding.header_block_explorer') }}
                   </v-btn>
@@ -164,7 +165,6 @@
 </style>
 
 <script>
-import logo from '~/static/images/logo.png'
 import Lotus_C_Icon from '~/static/images/lotus/Lotus_C_Icon.png'
 import link from '~/static/text/link'
 import brand from '~/static/text/brand'

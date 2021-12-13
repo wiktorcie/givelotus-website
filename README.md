@@ -1,10 +1,10 @@
-# GiveLotus.org made with Vue, NuxtJS and Vuetify 
+# GiveLotus.org made with Vue, NuxtJS and Vuetify
 
 Pushes to master will deploy to https://givelotus.netlify.app/
 
 Features:
 
-- seo optimized (100% at google lighthouse) 
+- seo optimized (100% at google lighthouse)
 - dark mode
 - internationalization with nuxt-i18n
 - SSR, SPA and UWA modes (https://recurse.me/posts/choosing-a-nuxt-mode.html)
@@ -42,13 +42,13 @@ or
 mode: "spa"
 ```
 
-and remove: 
+and remove:
 
 ```
 target: 'static',
 ```
 
-then 
+then
 
 ```
 yarn start
@@ -56,4 +56,4 @@ yarn start
 
 Credits:
 
-built with impressive awrora-starter https://github.com/ilhammeidi/awrora-starter
+built with amazing awrora-starter https://github.com/ilhammeidi/awrora-starter
