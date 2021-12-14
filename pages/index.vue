@@ -14,9 +14,8 @@
           <feature />
         </section> -->
 
-
-        <section id="projects2" :class="isMobile ? 'space-top-short' : 'space-top'">
-          <Projects2 />
+        <section id="carousel" :class="isMobile ? 'space-top-short' : 'space-top'">
+          <Carousel />
         </section>
         <br>
 
@@ -103,7 +102,7 @@ import Testimonials from '~/components/Testimonials'
 import Faq from '~/components/Faq'
 import FooterWithDeco from '~/components/Footer/FooterWithDeco'
 import Notification from '~/components/Notification'
-import Projects2 from '~/components/Projects2'
+import Carousel from '~/components/Carousel'
 
 import brand from '~/static/text/brand'
 
@@ -111,7 +110,7 @@ export default {
   components: {
     'main-header': Header,
     Banner,
-    Projects2,
+    Carousel,
     CompanyLogo,
     Counter,
     Feature,

@@ -131,47 +131,47 @@ const testiData = [
     text:
       'Open Source Software',
     avatar: imgAPI.lotus[3],
-    name: 'John Doe',
-    title: 'Chief Digital Officer',
+    name: '',
+    title: 'Open Source Software',
     logo: imgAPI.lotus[3]
   },
   {
     text:
       'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
     avatar: imgAPI.lotus[3],
-    name: 'Jean Doe',
-    title: 'Chief Digital Officer',
+    name: '',
+    title: 'Digital Privacy',
     logo: imgAPI.lotus[3]
   },
   {
     text:
       'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
     avatar: imgAPI.lotus[3],
-    name: 'Jena Doe',
-    title: 'Graphic Designer',
+    name: '',
+    title: 'Humanitarian Efforts',
     logo: imgAPI.lotus[3]
   },
   {
     text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel.',
     avatar: imgAPI.lotus[3],
-    name: 'Jovelin Doe',
-    title: 'Senior Graphic Designer',
+    name: '',
+    title: 'Permaculture',
     logo: imgAPI.lotus[3]
   },
   {
     text:
       'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
     avatar: imgAPI.lotus[3],
-    name: 'Jihan Doe',
-    title: 'CEO Software House',
+    name: '',
+    title: 'Renewable Power',
     logo: imgAPI.lotus[3]
   },
   {
     text:
       'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
     avatar: imgAPI.lotus[3],
-    name: 'Jovelin Doe',
-    title: 'Senior Graphic Designer',
+    name: '',
+    title: 'Human Rights',
     logo: imgAPI.lotus[3]
   }
 ]

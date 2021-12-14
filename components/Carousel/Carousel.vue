@@ -29,7 +29,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import './projects2-style.scss';
+@import './carousel-style.scss';
 </style>
 
 <script>
@@ -90,7 +90,7 @@ export default {
           // enable/disable playing slideshow
           play: true,
           // the delay duration between slides in milliseconds
-          speed: 5000,
+          speed: 10000,
           // if setup, the slideshow will be in the loop.
           repeat: true,
         },

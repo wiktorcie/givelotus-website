@@ -81,7 +81,7 @@ export default () => {
         "header_feature": "feature",
         "header_testimonials": "testimonials",
         "header_projects": "projects",
-        "header_projects2": "projects",
+        "header_carousel": "projects",
         "header_pricing": "pricing and plan",
         "header_faq": "faq",
         "header_contact": "contact",
