@@ -56,7 +56,6 @@
               {{ $t('lotusLanding.banner_watchvideo') }}
             </v-btn>
             <v-btn
-              :href="link.lotus.login"
               color="secondary"
               large
             >
