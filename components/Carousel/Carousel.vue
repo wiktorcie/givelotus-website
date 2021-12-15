@@ -90,7 +90,7 @@ export default {
           // enable/disable playing slideshow
           play: true,
           // the delay duration between slides in milliseconds
-          speed: 10000,
+          speed: 15000,
           // if setup, the slideshow will be in the loop.
           repeat: true,
         },
