@@ -61,7 +61,7 @@ module.exports = {
       { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicons/favicon-16x16.png' },
       { rel: 'manifest', href: '/favicons/manifest.json' },
       // Fonts and Icons
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap' },
+      // { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
       { rel: 'stylesheet', href: 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' }
     ]
@@ -80,7 +80,8 @@ module.exports = {
     '~/assets/vendors/animate-extends.css',
     '~/assets/vendors/hamburger-menu.css',
     '~/assets/vendors/slick-carousel/slick.css',
-    '~/assets/vendors/slick-carousel/slick-theme.css'
+    '~/assets/vendors/slick-carousel/slick-theme.css',
+    "~/assets/global.css",
   ],
   /*
   ** Plugins to load before mounting the App
