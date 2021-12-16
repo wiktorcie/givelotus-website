@@ -79,7 +79,7 @@ const faqData = [
     q: 'Where can I trade?',
     a:
       'You can trade Lotus on Exbitron for <a href="https://www.exbitron.com/trading/xpiusdt" target="_blank">USDT</a>, <a href="https://www.exbitron.com/trading/xpidoge" target="_blank">Dogecoin</a> and <a href="https://www.exbitron.com/trading/xpibch" target="_blank">Bitcoin Cash</a>'
-  },
+    },
   {
     q: 'How can I contribute to the project?',
     a:

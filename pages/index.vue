@@ -6,13 +6,10 @@
         <section id="home">
           <banner />
         </section>
-        <section :class="!isMobile && 'space-top-short'">
-          <counter />
-        </section>
 
-        <!-- <section id="feature" :class="isMobile ? 'space-top-short' : 'space-top'">
+        <section id="feature" :class="isMobile ? 'space-top-short' : 'space-top'">
           <feature />
-        </section> -->
+        </section>
 
         <section id="carousel" :class="isMobile ? 'space-top-short' : 'space-top'">
           <Carousel />

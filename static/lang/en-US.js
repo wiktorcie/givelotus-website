@@ -120,6 +120,12 @@ export default () => {
         "bitcoin_abc_desc": " Bitcoin ABC develops highly scalable open-source software for mining and transferring cryptotokens. Although Bitcoin ABC does not charge for its work, Lotus uses this software as a basis for the network and deems it appropriate to reciprocate to these developers. ",
         "services_title": "Projects enabled by Lotus:",
         "services_button": "Explore project",
+        "feature_1": "Based on the codebase of eCash, which allows organically scaling to +1M tx/second",
+        "feature_2": "50% of coinbase outputs go to miners, 50% to projects supporting the community",
+        "feature_3": "Tap root with state, bigger integers, more opcodes and a new smart sighash",
+        "feature_4": "Issuance of new coins softly follows supply and demand",
+        "feature_5": "Self-organizing with highly efficient swarmwise governance system",
+        "feature_6": "Built with proven and scalable codebase",
       }
     })
   })
