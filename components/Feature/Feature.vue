@@ -11,30 +11,7 @@
         <v-col sm="6" class="px-8">
           <div class="counter-item">
             <figure>
-              <img src="/images/blockchain.png"  />
-            </figure>
-            <div class="text" v-if="loaded">
-              <h4 class="use-text-title">
-                <!-- +<span
-                  v-countUp:onWindowScroll.once="{
-                    watchedElId: 'watched_counter',
-                    startValue: 0,
-                    endValue: 100,
-                    options: { duration: 1 }
-                  }"
-                />K -->
-                Stable
-              </h4>
-              <h6 class="use-text-subtitle2">
-                {{ $t('lotusLanding.feature_4') }}
-              </h6>
-            </div>
-          </div>
-        </v-col>
-        <v-col sm="6" class="px-8">
-          <div class="counter-item">
-            <figure>
-              <img src="/images/blockchain.png" alt="presenter" />
+              <img src="/images/smart_contracts.png" alt="presenter" />
             </figure>
             <div class="text" v-if="loaded">
               <h4 class="use-text-title">
@@ -57,7 +34,7 @@
         <v-col sm="6" class="px-8">
           <div class="counter-item">
             <figure>
-              <img src="/images/blockchain.png" alt="money" />
+              <img src="/images/self-funding3.png" alt="money" />
             </figure>
             <div class="text" v-if="loaded">
               <h4 class="use-text-title">
@@ -81,7 +58,7 @@
         <v-col sm="6" class="px-8">
           <div class="counter-item">
             <figure>
-              <img src="/images/blockchain.png" alt="unlimited" />
+              <img src="/images/scalable.png" alt="unlimited" />
             </figure>
             <div class="text" v-if="loaded">
               <h4 class="use-text-title">Scalable</h4>
@@ -91,7 +68,29 @@
             </div>
           </div>
         </v-col>
-
+        <v-col sm="6" class="px-8">
+          <div class="counter-item">
+            <figure>
+              <img src="/images/stable.png"  />
+            </figure>
+            <div class="text" v-if="loaded">
+              <h4 class="use-text-title">
+                <!-- +<span
+                  v-countUp:onWindowScroll.once="{
+                    watchedElId: 'watched_counter',
+                    startValue: 0,
+                    endValue: 100,
+                    options: { duration: 1 }
+                  }"
+                />K -->
+                Stable
+              </h4>
+              <h6 class="use-text-subtitle2">
+                {{ $t('lotusLanding.feature_4') }}
+              </h6>
+            </div>
+          </div>
+        </v-col>
 
         <!-- <v-col sm="6" class="px-8">
           <div class="counter-item">

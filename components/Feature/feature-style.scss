@@ -15,7 +15,7 @@
 .counter-item {
   align-items: center;
   display: flex;
-  margin: spacing(5);
+  margin: spacing(2);
   @include breakpoints-down(xs) {
     margin: spacing(2, 4);
   }
@@ -24,14 +24,19 @@
     border: 1px solid $palette-primary-main;
     border-radius: 10px;
     transform: rotate(45deg);
-    width: 100px;
-    height: 100px;
+    width: 70%;
+    height: 70%;
     line-height: 100px;
     text-align: center;
     vertical-align: middle;
     @include breakpoints-down(xs) {
       width: 70px;
       height: 70px;
+      line-height: 70px;
+    }
+    @include breakpoints-down(sm) {
+      width: 90px;
+      height: 90px;
       line-height: 70px;
     }
     img {
