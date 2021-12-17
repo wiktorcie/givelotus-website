@@ -1,12 +1,16 @@
 <template>
   <div class="root">
     <v-container class="max-md">
+      <br>
       <title-main
         :head="$t('lotusLanding.feature_title')"
         :desc="$t('lotusLanding.feature_desc')"
         align="center"
         color="primary"
-      />
+      >
+      Features of Lotus:
+      </title-main>
+
       <v-row class="spacing8 grid">
         <v-col sm="6" class="px-8">
           <div class="counter-item">

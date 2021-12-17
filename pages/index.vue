@@ -7,7 +7,7 @@
           <banner />
         </section>
 
-        <section id="feature" :class="isMobile ? 'space-top-short' : 'space-top'">
+        <section id="about" :class="isMobile ? 'space-top-short' : 'space-top'">
           <feature />
         </section>
 
