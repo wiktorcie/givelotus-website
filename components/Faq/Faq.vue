@@ -16,7 +16,7 @@
           </p>
           <hidden point="smDown">
             <div class="illustration">
-              <parallax-medium />
+              <!-- <parallax-medium /> -->
               <img src="/images/lotus/faq.png" alt="illustration" />
             </div>
           </hidden>
