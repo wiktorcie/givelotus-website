@@ -8,7 +8,7 @@
         align="center"
         color="primary"
       >
-      Features of Lotus:
+      Lotus is about:
       </title-main>
 
       <v-row class="spacing8 grid">
@@ -65,7 +65,7 @@
               <img src="/images/scalable.png" alt="unlimited" />
             </figure>
             <div class="text" v-if="loaded">
-              <h4 class="use-text-title">Scalable</h4>
+              <h4 class="use-text-title">Scalability</h4>
               <h6 class="use-text-subtitle2">
                 {{ $t('lotusLanding.feature_1') }}
               </h6>
@@ -75,7 +75,7 @@
         <v-col sm="6" class="px-8">
           <div class="counter-item">
             <figure>
-              <img src="/images/stable.png"  />
+              <img src="/images/stable3.png"  />
             </figure>
             <div class="text" v-if="loaded">
               <h4 class="use-text-title">
@@ -87,7 +87,7 @@
                     options: { duration: 1 }
                   }"
                 />K -->
-                Stable
+                Stability
               </h4>
               <h6 class="use-text-subtitle2">
                 {{ $t('lotusLanding.feature_4') }}

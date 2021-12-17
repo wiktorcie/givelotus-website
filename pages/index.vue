@@ -9,16 +9,13 @@
 
         <section id="about" :class="isMobile ? 'space-top-short' : 'space-top'">
           <feature />
+           <testimonials />
         </section>
 
         <section id="carousel" :class="isMobile ? 'space-top-short' : 'space-top'">
           <Carousel />
         </section>
         <br>
-
-        <section id="testimonials" class="space-bottom-testi">
-          <testimonials />
-        </section>
 
         <section id="faq" class="space-top-short">
           <faq />

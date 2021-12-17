@@ -136,39 +136,35 @@ const testiData = [
     logo: imgAPI.lotus[3]
   },
   {
-    text:
-      'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
+    text: 'Digital Privacy',
     avatar: imgAPI.lotus[3],
     name: '',
     title: 'Digital Privacy',
     logo: imgAPI.lotus[3]
   },
   {
-    text:
-      'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+    text: 'Humanitarian Efforts',
     avatar: imgAPI.lotus[3],
     name: '',
     title: 'Humanitarian Efforts',
     logo: imgAPI.lotus[3]
   },
   {
-    text: 'Sed imperdiet enim ligula, vitae viverra justo porta vel.',
+    text: 'Permaculture',
     avatar: imgAPI.lotus[3],
     name: '',
     title: 'Permaculture',
     logo: imgAPI.lotus[3]
   },
   {
-    text:
-      'Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero.',
+    text: 'Renewable Power',
     avatar: imgAPI.lotus[3],
     name: '',
     title: 'Renewable Power',
     logo: imgAPI.lotus[3]
   },
   {
-    text:
-      'Vestibulum sit amet tortor sit amet libero lobortis semper at et odio. In eu tellus tellus. Pellentesque ullamcorper aliquet ultrices. Aenean facilisis vitae purus facilisis semper. Nam vitae scelerisque lorem, quis tempus libero.',
+    text: 'Human Rights',
     avatar: imgAPI.lotus[3],
     name: '',
     title: 'Human Rights',

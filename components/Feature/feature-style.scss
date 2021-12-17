@@ -21,7 +21,7 @@
   }
   figure {
     @include margin-right($spacing5);
-    border: 1px solid $palette-primary-main;
+    // border: 1px solid $palette-primary-main;
     border-radius: 10px;
     transform: rotate(45deg);
     width: 70%;
