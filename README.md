@@ -2,6 +2,8 @@
 
 Pushes to master will deploy to https://givelotus.netlify.app/
 
+Current status: https://decisive-indigo-970.notion.site/842de46bfec648d698419480e6aa9d18?v=cb4e833f98f24383ba481d14a871114e
+
 Features:
 
 - seo optimized (100% at google lighthouse)
