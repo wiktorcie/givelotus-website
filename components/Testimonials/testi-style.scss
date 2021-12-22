@@ -1,169 +1,125 @@
 .root {
+  @include use-theme(background-image, linear-gradient(120deg, $palette-secondary-main, $palette-primary-main), linear-gradient(120deg, $palette-secondary-dark, $palette-primary-dark));
+  padding: spacing(10, 0);
+  color: $palette-common-white;
   position: relative;
-  @include breakpoints-up(sm) {
-    padding-bottom: $spacing8
-  }
-  @include breakpoints-down(sm) {
-    background: linear-gradient(-45deg, $palette-primary-main 20%, $palette-primary-dark 70%);
-  }
-  @include breakpoints-down(xs) {
-    padding-bottom: $spacing10
-  }
+  z-index: 10
 }
-
-.slider-wrap {
-  position: relative;
-}
-
-.decoration {
+.avatar-wrap {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  top: 0;
-  width: 830px;
-  height: 600px;
-  @include left(-160px);
-  @include breakpoints-down(md) {
-    @include left(-320px)
-  }
-  svg {
-    fill: $palette-primary-main;
-    transform: scale(1.2);
-    width: 100%;
-    height: 100%
+  .avatar-item {
+    position: absolute;
   }
 }
-
-.testi-title {
-  position: relative;
-  margin: spacing(0, 3, 8);
-  padding-top: $spacing7;
-  color: $palette-common-white;
-  strong {
-    font-weight: $font-bold
-  }
-}
-
-.sliderWrap {
-  position: relative
-}
-
-.v-icon.icon {
-  font-size: 140px;
-  position: absolute;
-  color: $palette-common-white;
-  opacity: 0.15;
-  top: 200px;
-  @include breakpoints-up(sm) {
-    @include left(240px)
-  }
-}
-
-.carousel {
-  @include breakpoints-up(lg) {
-    margin: spacing(0, 2)
-  }
-  .slick-active {
-    p {
-      opacity: 1;
-      transition: all 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-      transform: translate3d(0, 0, 0)
-    }
-  }
-}
-
-.item {
-  position: relative
-}
-
-.inner {
-  color: $palette-common-white;
-  .v-application--is-rtl & {
-    direction: rtl
-  }
-  @include breakpoints-up(sm) {
-    display: flex;
+.text {
+  padding-top: $spacing5;
+  h3 {
+    margin-bottom: $spacing3
   }
   p {
-    opacity: 0;
-    flex: 1;
-    transform: translate3d(-10%, 0, 0);
-    margin-top: $spacing5;
-    @include breakpoints-up(lg) {
-      margin-top: $spacing10
-    }
-    @include breakpoints-up(sm) {
-      width: 100%
-    }
-    @include breakpoints-down(xs) {
-      text-align: center;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      height: 75px;
-      overflow: hidden;
-      text-overflow: ellipsis
-    }
+    margin-bottom: $spacing3;
+    font-size: 18px;
+    line-height: 32px
+  }
+  .button {
+    min-width: 160px;
+  }
+  @include breakpoints-down(sm) {
+    text-align: center
   }
 }
-
-.profile {
-  text-align: center;
-  padding: $spacing3;
-  @include breakpoints-up(lg) {
-    padding: spacing(2, 3)
-  }
-}
-
-.avatar {
-  width: 85px !important;
-  height: 85px !important;
-  margin: 0 auto;
-  margin-bottom: $spacing3
-}
-
-.name {
-  font-size: 18px;
-  font-weight: $font-medium;
-  span {
-    margin-top: 4px;
-    font-size: 14px;
-    display: block
-  }
-}
-
-.logo-wrap {
+.world-map {
+  background: url(/images/worldMap.svg) no-repeat center center;
+  background-size: 100%;
   position: relative;
-  z-index: 42;
+  margin: 0 auto;
+  @include breakpoints-up(sm) {
+    height: 360px;
+    width: 580px
+  }
 }
-
-.figure-btn {
-  display: inline-block;
+.title-serif {
+  font-family: 'Times New Roman';
+}
+.person {
+  position: absolute
+}
+.avatar {
+  transition: all 0.3s ease-out;
+  &:hover {
+    transform: scale(1.2)
+  }
+}
+.dot {
+  border-radius: 50%;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: $palette-secondary-main;
+  border: 2px solid #FFF;
+  box-shadow: 0 1.5px 24.5px 4.5px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-out;
+  &:hover {
+    transform: scale(1.2)
+  }
+}
+.title-main {
+  @include palette-text-secondary;
+}
+.popover {
+  pointer-events: none
+}
+.paper {
+  width: 300px;
+  border-radius: 0 !important;
+  background: none;
+  box-shadow: none;
+  &:before {
+    content: "";
+    border-top: 15px solid;
+    @include use-theme(border-top-color, $light-background-paper, $dark-background-paper);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    position: absolute;
+    @include left(calc(50% - 25px));
+    bottom: 15px
+  }
+}
+.paper-block {
+  @include palette-background-paper;
   padding: $spacing3;
-  line-height: 150px;
-  text-align: center;
-  vertical-align: middle;
-  width: 30%;
-  height: 150px;
-  button {
-    height: auto !important;
-    padding: 6px 8px !important;
-    border-radius: 36px;
-    ::v-deep .v-btn__content {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
+  margin-bottom: 30px;
+  border-radius: 0 !important;
+  position: relative;
+  box-shadow: none !important;
+  h6 {
+    margin-top: $spacing2;
+    font-size: 14px
   }
-  @include breakpoints-down(md) {
-    padding: $spacing2
+  .title-main {
+    font-style: italic;
+    font-size: 12px;
   }
-  img {
-    transition: all 0.3s ease-out;
-    display: block;
-    width: 100%;
-    filter: grayscale(1) contrast(0.5) brightness(1.5);
+}
+.item-carousel {
+  padding: $spacing2
+}
+.card {
+  padding: $spacing3;
+  border-radius: 4px !important;
+  .avatar {
+    width: 30px;
+    height: 30px
   }
-  .active, &:hover {
-    img {
-      filter: none
-    }
+}
+.name {
+  display: flex;
+  margin-top: $spacing1;
+  align-items: center;
+  span {
+    display: inline-block;
+    @include margin-left($spacing1);
   }
 }

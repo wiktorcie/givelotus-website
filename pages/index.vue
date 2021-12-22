@@ -20,6 +20,8 @@
         <section id="faq" class="space-top-short">
           <faq />
         </section>
+        <testimonials />
+
       </div>
       <section id="footer">
         <footer-with-deco />
