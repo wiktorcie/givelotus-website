@@ -1,7 +1,13 @@
 <template>
-  <div class="title" :class="align">
+  <div
+    class="main-title"
+    :class="[align, { dark: dark }]"
+  >
+    <p class="caption-title">
+      {{ caption }}
+    </p>
     <h4>
-      <slot />
+      {{ text }}
     </h4>
   </div>
 </template>
@@ -16,6 +22,18 @@ export default {
     align: {
       type: String,
       default: 'left'
+    },
+    text: {
+      type: String,
+      required: true
+    },
+    caption: {
+      type: String,
+      required: true
+    },
+    dark: {
+      type: Boolean,
+      default: false
     }
   }
 }

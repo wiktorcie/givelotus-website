@@ -9,7 +9,7 @@
 
         <section id="about" :class="isMobile ? 'space-top-short' : 'space-top'">
           <feature />
-           <testimonials />
+          <benefit />
         </section>
 
         <section id="carousel" :class="isMobile ? 'space-top-short' : 'space-top'">
@@ -85,6 +85,7 @@
 
 <script>
 import Header from '~/components/Header'
+import Benefit from '~/components/Benefit'
 import Hidden from '~/components/Hidden'
 import PageNav from '~/components/PageNav'
 import Banner from '~/components/Banner'
@@ -104,6 +105,7 @@ export default {
   components: {
     'main-header': Header,
     Banner,
+    Benefit,
     Carousel,
     CompanyLogo,
     Counter,

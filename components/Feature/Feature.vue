@@ -3,12 +3,11 @@
     <v-container class="max-md">
       <br>
       <title-main
-        :head="$t('lotusLanding.feature_title')"
-        :desc="$t('lotusLanding.feature_desc')"
+        caption="We are about"
         align="center"
+        class='use-text-title'
         color="primary"
       >
-      Lotus is about:
       </title-main>
 
       <v-row class="spacing8 grid">

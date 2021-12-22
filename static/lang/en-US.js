@@ -96,6 +96,8 @@ export default () => {
         "counter_free": "Since launch",
         "counter_users": "Telegram Group Users",
         "counter_providers": "Hashrate (MH/s)",
+        "feature_title": "Lotus",
+        "feature_desc": "main features are ",
         "feature_title1": "Lotus",
         "feature_titlestrong1": "- appreciation",
         "feature_desc1": "Every day, in our interactions with other people we have experiences that make life worth living. We say, “thank you” to each other. But, talk is cheap and words are fleeting. It’s easy for someone to express appreciation through words alone. How motivating is “thank you?” What if we could seamlessly back our words with something priceless? What would the world look like if we had a more effective way to express gratitude to each other? What if we could keep the “appreciation,” we receive, forever? ",
