@@ -104,7 +104,7 @@
                     self organizing around the ideals
                   </p>
                   <v-btn color="secondary" href="#contact" large class="button">
-                    Join the devs
+                    Join the development
                   </v-btn>
                 </div>
               </u-animate>
