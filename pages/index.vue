@@ -9,6 +9,7 @@
 
         <section id="about" :class="isMobile ? 'space-top-short' : 'space-top'">
           <feature />
+          <Feature2 />
           <benefit />
         </section>
 
@@ -94,6 +95,7 @@ import Banner from '~/components/Banner'
 import CompanyLogo from '~/components/CompanyLogo'
 import Counter from '~/components/Counter'
 import Feature from '~/components/Feature'
+import Feature2 from '~/components/Feature2'
 import Projects from '~/components/Projects'
 import Testimonials from '~/components/Testimonials'
 import Faq from '~/components/Faq'
@@ -112,6 +114,7 @@ export default {
     CompanyLogo,
     Counter,
     Feature,
+    Feature2,
     Projects,
     Testimonials,
     Faq,
