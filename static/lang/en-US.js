@@ -124,7 +124,7 @@ export default () => {
         "services_title": "Projects enabled by Lotus:",
         "services_button": "Explore project",
         "feature_1": "Based on the codebase of eCash, which allows organically scaling to +1M tx/second",
-        "feature_2": "50% of coinbase outputs go to miners, 50% to projects supporting the community",
+        "feature_2": "50% of new coins go to miners, 50% to projects supporting the community",
         "feature_3": "Tap root with state, bigger integers, more opcodes and a new smart sighash",
         "feature_4": "Issuance of new coins softly follows supply and demand",
         "feature_5": "Self-organizing with highly efficient swarmwise governance system",
