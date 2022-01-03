@@ -108,7 +108,7 @@ export default () => {
         "feature_title3": "New Lotus are issued through rewards that are split between miners and projects which benefit the public good as a show of appreciation. ",
         "feature_titlestrong3": "Whenever you use Lotus to appreciate your friends, you know that you're also supporting these great projects.",
         "feature_desc3": "We empowers your marketing, sales and services teams to collaborate across the entire customer lifecycle for more meaningful, memorable experiences.",
-        "testi_title": "Lotus is a token used to show appreciation for positive action. Most digital tokens are rewarded only to the developers or miners. With Lotus, new tokens are given directly to self-organizing groups of individuals working towards causes which benefit all of humanity -- ones with which you can get involved. When you give or accept Lotus, are supporting the commons and adding value to the worldwide economy. ",
+        "testi_title": "Lotus is a token used to show appreciation for positive action. Most digital tokens are rewarded only to the developers or miners. With Lotus, new tokens are given directly to self-organizing groups of individuals working towards causes which benefit all of humanity - ones with which you can get involved. When you give or accept Lotus, are supporting the commons and adding value to the worldwide economy. ",
         "testi_titlestrong": " The initiatives you support when you use Lotus are: ",
         "pricing_title": "Pricing & Plan",
         "pricing_subtitle": "The best value designed for your workplace, starting at just $24/user/month.",
@@ -123,21 +123,18 @@ export default () => {
         "bitcoin_abc_desc": " Bitcoin ABC develops highly scalable open-source software for mining and transferring cryptotokens. Although Bitcoin ABC does not charge for its work, Lotus uses this software as a basis for the network and deems it appropriate to reciprocate to these developers. ",
         "services_title": "Projects enabled by Lotus:",
         "services_button": "Discover",
-        "feature_1": "Based on the codebase of eCash, which allows organically scaling to +1M tx/second",
+        "feature_1": "Based on the codebase of eCash, which allows organically scaling to +1M transactions/second",
         "feature_2": "50% of new coins go to miners, 50% to projects supporting the community",
         "feature_3": "Tap root with state, bigger integers, more opcodes and a new smart sighash",
         "feature_4": "Issuance of new coins softly follows supply and demand",
         "feature_5": "Self-organizing with highly efficient swarmwise governance system",
         "feature_6": "Built with proven and scalable codebase",
         "morefeature_headtitle1": 'Our mission',
-        "morefeature_title1": 'The Lotus Project believes that it would foster the spirit of reciprocity',
-        "morefeature_headtitle2": '',
-        "morefeature_title2": '',
-        "morefeature_headtitle3": '',
-        "morefeature_title3": '',
-
-
-
+        "morefeature_title1": 'Powerful symbol of appreciation',
+        "morefeature_headtitle2": 'Eternal gratitude',
+        "morefeature_title2": 'The joy of giving and receiving ',
+        "morefeature_headtitle3": 'Community first',
+        "morefeature_title3": 'Lotus is a community-driven innovation that will ensure that your gratitude is preserved forever.',
       }
     })
   })

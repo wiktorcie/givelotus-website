@@ -3,10 +3,10 @@
     class="main-title"
     :class="[align, { dark: dark }]"
   >
-    <p class="caption-title">
+    <p class="caption-title" :class="[captionClass]">
       {{ caption }}
     </p>
-    <h4>
+    <h4 :class="[textClass]">
       {{ text }}
     </h4>
   </div>
@@ -30,6 +30,14 @@ export default {
     caption: {
       type: String,
       required: false
+    },
+    captionClass: {
+      type: String,
+      default: ''
+    },
+    textClass: {
+      type: String,
+      default: ''
     },
     dark: {
       type: Boolean,
