@@ -129,6 +129,15 @@ export default () => {
         "feature_4": "Issuance of new coins softly follows supply and demand",
         "feature_5": "Self-organizing with highly efficient swarmwise governance system",
         "feature_6": "Built with proven and scalable codebase",
+        "morefeature_headtitle1": 'Our mission',
+        "morefeature_title1": 'The Lotus Project believes that it would foster the spirit of reciprocity',
+        "morefeature_headtitle2": '',
+        "morefeature_title2": '',
+        "morefeature_headtitle3": '',
+        "morefeature_title3": '',
+
+
+
       }
     })
   })
