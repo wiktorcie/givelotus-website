@@ -144,7 +144,7 @@
 </style>
 
 <script>
-import logo from '~/static/images/logo.png'
+import logo from '~/static/images/Lotus_C_Primary_Stacked.png'
 import brand from '~/static/text/brand'
 
 export default {
@@ -154,7 +154,7 @@ export default {
     lang: 'en',
     footers: [
       {
-        title: 'Company',
+        title: 'Lotus Foundation',
         description: ['Team', 'History', 'Contact us', 'Locations'],
         link: ['#team', '#history', '#contact-us', '#locations']
       },

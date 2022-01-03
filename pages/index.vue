@@ -22,7 +22,7 @@
         <section id="faq" class="space-top-short">
           <faq />
         </section>
-        <developersMap />
+        <!-- <developersMap /> -->
 
       </div>
       <section id="footer">
