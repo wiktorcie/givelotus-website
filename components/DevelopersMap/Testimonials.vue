@@ -117,13 +117,13 @@
 </template>
 
 <style lang="scss" scoped>
-@import './testi-style.scss';
+@import './style.scss';
 </style>
 
 <script>
 import Hidden from '../Hidden'
 import AvatarBuble from './AvatarBuble'
-import testiData from './testimonialsData'
+import testiData from './developersData'
 import Title from '../Title'
 
 export default {

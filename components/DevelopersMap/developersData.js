@@ -1,6 +1,6 @@
 import imgApi from '~/static/images/imgAPI'
 
-const testimonialsData = [
+const developersData = [
   {
     name: 'USA',
     title: 'San Francisco',
@@ -40,4 +40,4 @@ const testimonialsData = [
 
 ]
 
-export default testimonialsData
+export default developersData

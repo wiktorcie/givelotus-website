@@ -8,7 +8,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import './testi-style.scss';
+@import './style.scss';
 </style>
 
 <script>

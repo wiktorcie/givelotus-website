@@ -32,7 +32,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import './feature-style.scss';
+@import './story-style.scss';
 </style>
 
 <script>

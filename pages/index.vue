@@ -8,8 +8,8 @@
         </section>
 
         <section id="about" :class="isMobile ? 'space-top-short' : 'space-top'">
-          <feature />
-          <Feature2 />
+          <features />
+          <story />
           <benefit />
         </section>
 
@@ -21,7 +21,7 @@
         <section id="faq" class="space-top-short">
           <faq />
         </section>
-        <testimonials />
+        <developersMap />
 
       </div>
       <section id="footer">
@@ -92,12 +92,11 @@ import Benefit from '~/components/Benefit'
 import Hidden from '~/components/Hidden'
 import PageNav from '~/components/PageNav'
 import Banner from '~/components/Banner'
-import CompanyLogo from '~/components/CompanyLogo'
 import Counter from '~/components/Counter'
-import Feature from '~/components/Feature'
-import Feature2 from '~/components/Feature2'
+import Features from '~/components/Features'
+import Story from '~/components/Story'
 import Projects from '~/components/Projects'
-import Testimonials from '~/components/Testimonials'
+import DevelopersMap from '~/components/DevelopersMap'
 import Faq from '~/components/Faq'
 import FooterWithDeco from '~/components/Footer/FooterWithDeco'
 import Notification from '~/components/Notification'
@@ -110,13 +109,12 @@ export default {
     'main-header': Header,
     Banner,
     Benefit,
+    DevelopersMap,
     Carousel,
-    CompanyLogo,
     Counter,
-    Feature,
-    Feature2,
+    Features,
+    Story,
     Projects,
-    Testimonials,
     Faq,
     FooterWithDeco,
     PageNav,

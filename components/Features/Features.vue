@@ -129,7 +129,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import 'feature-style.scss';
+@import 'features-style.scss';
 </style>
 
 <script>
