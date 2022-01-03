@@ -10,7 +10,7 @@
           >
             <v-col md="6" cols="12" class="pa-6">
               <figure class="illustration">
-                <img src="/images/giving.png" alt="feature" />
+                <img src="/images/heartmsg.gif" alt="feature" />
               </figure>
             </v-col>
             <v-col md="6" cols="12" class="pa-6">
@@ -81,7 +81,7 @@
             </v-col>
             <v-col md="6" cols="12">
               <figure class="illustration">
-                <img src="/images/giving.png" alt="feature" />
+                <img src="/images/lovephone.gif" alt="feature" />
               </figure>
             </v-col>
           </v-row>
@@ -111,7 +111,7 @@
               </v-btn> -->
             </div>
             <figure class="illustration">
-              <img src="/images/giving.png" alt="feature" />
+              <img src="/images/gift.png" alt="feature" />
             </figure>
           </v-col>
         </v-row>

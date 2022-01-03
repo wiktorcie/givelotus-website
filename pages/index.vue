@@ -10,11 +10,12 @@
         <section id="about" :class="isMobile ? 'space-top-short' : 'space-top'">
           <features />
           <story />
-          <benefit />
         </section>
 
         <section id="carousel" :class="isMobile ? 'space-top-short' : 'space-top'">
           <Carousel />
+          <benefit />
+
         </section>
         <br>
 

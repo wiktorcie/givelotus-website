@@ -55,12 +55,12 @@
               </span>
               {{ $t('lotusLanding.banner_watchvideo') }}
             </v-btn>
-            <v-btn
+            <!-- <v-btn
               color="secondary"
               large
             >
               {{ $t('lotusLanding.learnmore') }}
-            </v-btn>
+            </v-btn> -->
           </div>
         </div>
         <div class="illustration">
