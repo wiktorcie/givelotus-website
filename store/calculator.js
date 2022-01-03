@@ -21,13 +21,10 @@ export const mutations = {
 }
 export const actions = {
   fetchPrice({ commit }) {
-    // return this.$axios.get(`${exbitronURL}/peatio/public/markets/xpiusdt/tickers`).then(
-    //   response => {
-    //     commit('UPDATE_PRICE', response.data.ticker.avg_price)
-    // })
-
-    // hardcode price for now, exbitron api under maintnance
-    commit('UPDATE_PRICE', '0.0019')
+    return this.$axios.get(`${exbitronURL}/peatio/public/markets/xpiusdt/tickers`).then(
+      response => {
+        commit('UPDATE_PRICE', response.data.ticker.avg_price)
+    })
   },
 
   fetchDifficulty({ commit }) {
