@@ -1,29 +1,5 @@
 <template>
   <div class="root">
-    <v-dialog
-      v-model="dialog"
-      max-width="690"
-    >
-      <v-card class="video-popup">
-        <v-card-title class="headline">
-          <h2 class="title">
-            {{ $t('lotusLanding.banner_title') }}
-            <v-btn icon @click="handleVideoClose()">
-              <v-icon>mdi-close</v-icon>
-            </v-btn>
-          </h2>
-        </v-card-title>
-        <div class="text-center" v-if="yt.use">
-          <youtube
-            :video-id="videoId"
-            :player-vars="playerVars"
-            :width= "640"
-            :height="360"
-            ref="youtube"
-          />
-        </div>
-      </v-card>
-    </v-dialog>
     <div class="decoration">
       <svg class="left-deco">
         <use xlink:href="/images/lotus/deco-bg-left.svg#main" />
@@ -44,27 +20,18 @@
           <p class="use-text-subtitle">
             {{ $t('lotusLanding.banner_subtitle') }}
           </p>
-          <div class="btn-area">
-            <v-btn
-              text
-              class="play-btn"
-              @click="handleVideoOpen()"
-            >
-              <span class="icon">
-                <i class="ion-ios-play-outline" />
-              </span>
-              {{ $t('lotusLanding.banner_watchvideo') }}
-            </v-btn>
-            <!-- <v-btn
-              color="secondary"
-              large
-            >
-              {{ $t('lotusLanding.learnmore') }}
-            </v-btn> -->
-          </div>
+
         </div>
-        <div class="illustration">
-          <img :src="imgAPI.lotus[5]" alt="illustration" style="border-radius: 50%"/>
+        <div>
+          <vue-flv-player
+            style="border-radius: 5%"
+            controls
+            autoplay
+            width="670px"
+            height="400px"
+            :muted="true"
+            :source="src"
+            type="mp4" />
         </div>
       </div>
     </v-container>
@@ -92,10 +59,11 @@ import Hidden from '../Hidden'
 
 export default {
   components: {
-    Hidden
+    Hidden,
   },
   data() {
     return {
+      src: "/videos/givelotus.mp4",
       videoId: 'ujCfPhGrQ5A',
       hide: false,
       link: link,
