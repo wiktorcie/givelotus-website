@@ -23,7 +23,12 @@
 
         </div>
         <div ref="videoContainer" class="item text-center">
-          <video autoplay muted controls width="450">
+          <video
+            autoplay
+            muted
+            controls
+            :height="height"
+            :width="width">
 
               <source src="/videos/givelotus.mp4"
                       type="video/mp4">
@@ -31,17 +36,6 @@
 
               Sorry, your browser doesn't support embedded videos.
           </video>
-
-          <!-- <vue-flv-player
-            style="border-radius: 5%"
-            controls
-            autoplay
-            :mediaDataSource="mediaDataSource"
-            :width="width"
-            :height="height"
-            :muted="true"
-            :source="src"
-            type="mp4" /> -->
         </div>
       </div>
     </v-container>
@@ -71,11 +65,7 @@ export default {
   },
   data() {
     return {
-      src: "https://firebasestorage.googleapis.com/v0/b/cashcs-go.appspot.com/o/givelotus.mp4?alt=media&token=7aaf2bbc-8bab-441a-af29-db75db164697",
       hide: false,
-      mediaDataSource: {
-        url: "https://firebasestorage.googleapis.com/v0/b/cashcs-go.appspot.com/o/givelotus.mp4?alt=media&token=7aaf2bbc-8bab-441a-af29-db75db164697"
-      },
       width: 416,
       height: 400,
       imgAPI: imgAPI,
@@ -84,7 +74,7 @@ export default {
   },
   mounted () {
     this.$nextTick(() => {
-      console.log(this.$refs.videoContainer.offsetWidth);
+      // console.log(this.$refs.videoContainer.offsetWidth);
       window.addEventListener("resize", this.resizeVideo);
       this.resizeVideo();
     });

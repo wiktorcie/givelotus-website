@@ -89,8 +89,6 @@ module.exports = {
   plugins: [
     '~/plugins/vue-fragment-config',
     '~/plugins/vue-wow-config',
-    { src: '~/plugins/vue-youtube-config', ssr: false },
-    { src: '~/plugins/vue-video-player', ssr: false },
     { src: '~plugins/i18n-config.js' },
     { src: '~/plugins/caroussel-config', ssr: false },
     { src: '~/plugins/countup-config', ssr: false },
