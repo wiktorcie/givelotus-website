@@ -9,8 +9,8 @@
       </svg>
     </div>
     <v-container :class="{ fixed: isDesktop }">
-      <div class="slider-wrap">
-        <div class="text">
+      <div class="container">
+        <div class="item text-center pr-10">
           <h3 class="use-text-title">
             {{ $t('lotusLanding.banner_title') }}
             <strong>
@@ -22,13 +22,13 @@
           </p>
 
         </div>
-        <div>
+        <div ref="videoContainer" class="item text-center">
           <vue-flv-player
             style="border-radius: 5%"
             controls
             autoplay
-            width="670px"
-            height="400px"
+            :width="width"
+            :height="height"
             :muted="true"
             :source="src"
             type="mp4" />
@@ -52,9 +52,7 @@
 </style>
 
 <script>
-import youtube from '~/youtube'
 import imgAPI from '~/static/images/imgAPI'
-import link from '~/static/text/link'
 import Hidden from '../Hidden'
 
 export default {
@@ -64,38 +62,14 @@ export default {
   data() {
     return {
       src: "/videos/givelotus.mp4",
-      videoId: 'ujCfPhGrQ5A',
       hide: false,
-      link: link,
+      width: 740,
+      height: 500,
       imgAPI: imgAPI,
       dialog: false,
-      player: null,
-      playerVars: {
-        autoplay: 0,
-        controls: 1,
-        rel: 0,
-        showinfo: 1,
-        mute: 0,
-        origin: 'https://localhost:8008'
-      },
-      yt: youtube
     }
   },
   methods: {
-    handleVideoOpen() {
-      if (!this.yt.use) {
-        return false
-      }
-      this.dialog = true
-      setTimeout(() => {
-        this.player = this.$refs.youtube.player
-        this.player.playVideo()
-      }, 100)
-    },
-    handleVideoClose() {
-      this.dialog = false
-      this.player.pauseVideo()
-    }
   },
   computed: {
     isDesktop() {

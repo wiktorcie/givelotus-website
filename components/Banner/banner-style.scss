@@ -257,3 +257,24 @@ $wave-deco-dark: '/images/lotus/deco-wave-dark.png';
 .hide {
   visibility: hidden
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 3;
+  @media (min-width: 1150) {
+    flex-direction: row;
+  }
+}
+
+.item {
+  width: 100%
+}
+
+.container > div {
+  flex: 100%; /* or - flex: 0 50% - or - flex-basis: 50% - */
+  /*demo*/
+  box-shadow: 0 0 0 1px black;
+  margin-bottom: 10px;
+}
