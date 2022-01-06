@@ -28,7 +28,8 @@
             muted
             controls
             :height="height"
-            :width="width">
+            >
+
 
               <source src="/videos/givelotus.mp4"
                       type="video/mp4">
@@ -67,7 +68,7 @@ export default {
     return {
       hide: false,
       width: 416,
-      height: 400,
+      height: 600,
       imgAPI: imgAPI,
       dialog: false,
     }

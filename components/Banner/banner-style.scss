@@ -21,7 +21,7 @@ $wave-deco-dark: '/images/lotus/deco-wave-dark.png';
   position: relative;
   padding: spacing(25, 0, 15);
   @include breakpoints-up(lg) {
-    height: 780px;
+    height: 1110px;
     padding: spacing(30, 0, 5)
   }
   @include breakpoints-down(xs) {
@@ -51,7 +51,7 @@ $wave-deco-dark: '/images/lotus/deco-wave-dark.png';
   right: auto;
   width: 1200px;
   height: 1500px;
-  transform: scale(0.5);
+  transform: scale(0.8);
   transform-origin: top left;
 }
 
