@@ -10,7 +10,7 @@
     </div>
     <v-container :class="{ fixed: isDesktop }">
       <div class="container">
-        <div class="item text-center pr-10">
+        <div class="item text-center pr-10 white--text">
           <h3 class="use-text-title">
             {{ $t('lotusLanding.banner_title') }}
             <strong>

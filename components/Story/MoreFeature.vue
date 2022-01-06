@@ -111,7 +111,7 @@
               </v-btn> -->
             </div>
             <figure class="illustration">
-              <img src="/images/gift.png" alt="feature" />
+              <img src="/images/community.png" alt="feature" />
             </figure>
           </v-col>
         </v-row>
