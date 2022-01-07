@@ -10,7 +10,7 @@
     </div>
     <v-container :class="{ fixed: isDesktop }">
       <div class="container">
-        <div class="item text-center pr-10 white--text">
+        <div class="item text-center  white--text">
           <h3 class="use-text-title">
             {{ $t('lotusLanding.banner_title') }}
             <strong>
@@ -27,13 +27,11 @@
             autoplay
             muted
             controls
-            :height="height"
+            style="border-radius:40px"
+            :width="width"
             >
-
-
               <source src="/videos/givelotus.mp4"
                       type="video/mp4">
-
 
               Sorry, your browser doesn't support embedded videos.
           </video>
