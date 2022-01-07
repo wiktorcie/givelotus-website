@@ -51,7 +51,7 @@ export default () => {
       },
       calculator: {
         "title": "Lotus Mining Calculator",
-        "subtitle": "[experimental]",
+        "subtitle": "",
         "user_rewards_xpi": "Your daily lotus rewards:",
         "user_electricity_costs": "Daily electricity cost:",
         "gpu_question": "What is your GPU card?",
@@ -122,7 +122,7 @@ export default () => {
         "becash_desc": " Be.cash collaborates with the Logos Foundation to assist in developing the lotus blockchain software, as well as developing Point of Sale systems and mobile payment methods for areas without the necessary infrastructure for traditional payment methods. ",
         "bitcoin_abc_desc": " Bitcoin ABC develops highly scalable open-source software for mining and transferring cryptotokens. Although Bitcoin ABC does not charge for its work, Lotus uses this software as a basis for the network and deems it appropriate to reciprocate to these developers. ",
         "services_title": "Projects enabled by Lotus:",
-        "services_button": "Discover",
+        "services_button": "Explore",
         "feature_1": "Based on the codebase of eCash, which allows organically scaling to +1M transactions/second",
         "feature_2": "50% of new coins go to miners, 50% to projects supporting the community",
         "feature_3": "Tap root with state, bigger integers, more opcodes and a new smart sighash",

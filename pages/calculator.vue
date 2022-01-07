@@ -1,6 +1,6 @@
 <template>
   <div class="main-wrap">
-    <main-header />
+    <main-header/>
     <Calculator
     />
   </div>

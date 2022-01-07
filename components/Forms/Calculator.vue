@@ -1,5 +1,5 @@
 <template>
-  <div class="page-wrap">
+  <div class="page-wrap pt-16">
     <v-snackbar
       :timeout="4000"
       top
@@ -19,29 +19,7 @@
       </v-btn>
     </v-snackbar>
 
-    <!-- <hidden point="mdUp">
-      <div class="logo logo-header">
-        <nuxt-link :to="routeLink.lotus.home">
-          <img :src="logo" alt="logo">
-          <span class="use-text-title">
-            {{ brand.lotus.projectName }}
-          </span>
-        </nuxt-link>
-      </div>
-    </hidden> -->
-
-    <v-container class="inner-wrap max-md">
-
-      <!-- <v-btn
-        :href="routeLink.lotus.home"
-        icon
-        class="backtohome"
-      >
-        <i class="ion-ios-home-outline" />
-        <i class="ion-ios-arrow-thin-left" />
-      </v-btn> -->
-
-
+    <v-container class="inner-wrap max-md pt-12">
       <div class="decoration">
         <svg class="left-deco">
           <use xlink:href="/images/lotus/deco-bg-left.svg#main" />
@@ -120,16 +98,15 @@
                     filled
                   />
                 </v-col>
+              </v-row>
 
-              <div class="btn-area flex">
-                <div class="form-control-label">
-                </div>
+              <v-col class="flex">
                 <v-switch
+                  class="align-right"
                   v-model="showAdvanced"
                   :label="$t('calculator.advanced')"
-                >
-                </v-switch>
-              </div>
+                />
+              </v-col>
 
               <v-container v-if='showAdvanced'>
                 <v-row
@@ -285,7 +262,7 @@ export default {
       showAdvanced: false,
       user_hashrate: 2200,
       user_watt: 250,
-      user_watt_cost: 0.1,
+      user_watt_cost: 0.2,
       valid: true,
       snackbar: false,
       message: '',
