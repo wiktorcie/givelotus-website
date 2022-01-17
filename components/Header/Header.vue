@@ -109,14 +109,6 @@
             :class="{ invert: invert }"
             class="nav-menu"
           >
-            <!-- <hidden point="xsDown">
-              <v-btn :href="link.lotus.login" class="text-btn" text>
-                {{ $t('lotusLanding.header_login') }}
-              </v-btn>
-              <v-btn :href="link.lotus.register" color="secondary" class="button">
-                {{ $t('lotusLanding.header_register') }}
-              </v-btn>
-            </hidden> -->
             <hidden v-if="!invert" point="xsDown">
               <v-btn icon class="social-btn"
                 href="https://twitter.com/givelotus"

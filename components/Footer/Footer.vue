@@ -9,12 +9,10 @@
         >
           <div class="logo">
             <img
+              style="border-radius: 40%"
               :src="logo"
               alt="logo"
             >
-            <!-- <h6 class="title">
-              {{ brand.lotus.projectName }}
-            </h6> -->
           </div>
           <p class="body-2 text-center" v-if="isDesktop">
             &copy;&nbsp;
